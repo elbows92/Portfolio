@@ -21,48 +21,47 @@ time, mark, audio, video {
 img {
 	max-width: 100%;
 }
-.intro {
+#intro {
 	
-}
-.intro_container {
-	width: 70%;
-	margin: auto;
-	margin-bottom: 4em;
 }
 .left {
-	width: 50%;
-	background-color: #c6c8c8;
-	height: 100vh;
-	display: inline-block;
-	position: relative;
+	width: 100%;
+	height: 200px;
+}
+.lefty {
+	display: none;
 }
 .right {
-	width: 50%;
-	float: right;
-	background-color: #daedea;
-	background-image: url("Site_Assets/Character_1_Big.jpg");
-	background-repeat: no-repeat;
-	background-position: center top;
-	height: 100vh;
-	margin-left: 0% !important;
-	
+	display: none;	
+}
+.righty {
+	display: none;
+}
+.full {
+	width: 100%;
+	padding-bottom: 2em;
+	background-color: #c6c8c8;
+	display: block;
 }
 .top {
+	display: block;
 	height: 200px;
 	width: 100%;
-	background-color: #daedea;
+	background-color: #deed0e;
 	background-image: url("Site_Assets/Character_1_Big.jpg");
 	background-repeat: no-repeat;
 	background-position: 50% 10%;
-	display: none;
+}
+.intro_container {
+	width: 80%;
+	margin: auto;
 }
 .white_space {
-	background-color: #fff;
-	width: 100%;
-	height: 200px;
+	display: none;
 }
 .intro_blurb {
 	margin-top: -2em;
+	margin-bottom: 2em;
 	padding-bottom: 2em;
 	border-bottom: solid 1px #111;
 }
@@ -71,30 +70,38 @@ img {
 }
 .lib_container {
 	margin-top: 1em;
+	margin-bottom: 3em;
 }
 .lib {
-	background-color: #fff100;
+	background-color: #deed0e;
 	color: #111;
 }
 .intro_buttons {
-	float: right;
-	margin-right: -3em;
+	float: none;
+	width: 6em;
+	margin: auto;
 }
 .intro_button {
 	width: 6em;
 	height: 2em;
-	background-color: #fff100;
+	background-color: #deed0e;
 	margin-bottom: 2em;
 	border-radius: 1em;
 	text-align: center;
 
 }
-.projects {
+.intro_button img{
+	max-height: 2em;
+}
+#projects {
 	
+}
+.top_bar {
+	height: 80px;
+	margin-bottom: 3em;
 }
 .relative {
 	position: relative;
-	display: inline-block;
 }
 .large_project_text {
 	position: absolute;
@@ -106,21 +113,24 @@ img {
 }
 .small_project_text {
 	position: absolute;
-	margin-top: -2.5em;
+	margin-top: -1.3em;
+	margin-left: 5%;
+	width: 90%;
 	border-bottom: solid 1px #111;
 	height: 100%;
 }
 .title_A {
 	font-size: 3em;
-	background-color: #fff100;
+	background-color: #deed0e;
 	padding: 7px;
 	color: #111;
 }
 .title_B {
-	font-size: 2.5em;
-	background-color: #fff100;
-	padding: 5px;
+	font-size: 2em;
+	background-color: #deed0e;
+	padding: 3px;
 	color: #111;
+	line-height: 1em;
 }
 .date {
 	position: absolute;
@@ -129,6 +139,9 @@ img {
 }
 .square_text {
 
+}
+.square_text p{
+	margin: 0;
 }
 .spacer {
 	height: 60px;
@@ -139,29 +152,60 @@ a:hover {
 
 /* Screens smaller than 770px */
 
-@media (max-width: 770px) {.left {
-	width: 100%;
-	height: 200px;
+@media (min-width: 550px) {
+	.full {
+		display: none;
 	}
-}
-@media (max-width: 770px) {.right {
-	display: none;
+	.lefty {
+		display: block;
+		background-color: #c6c8c8;
 	}
-}
-@media (max-width: 770px) {.white_space {
-	display: none;
+	.righty {
+		height: 100%;
+		position: absolute;
+		z-index: -9000;
+		right: 0;
+		top: 0;
+		margin-left: 0!important;
+		width: 52% !important;
+		display: block;
+		background-image: url("Site_Assets/Character_1_Big.jpg");
+		background-repeat: no-repeat;
+		background-position: center top;
+
 	}
-}
-@media (max-width: 770px) {.top {
-	display: block;
+	.left {
+		display: inline-block;
+		width: 50%;
+		background-color: #c6c8c8;
+		height: 700px;
 	}
-}
-@media (max-width: 770px) {.relative {
-	margin:auto;}
-}
-@media (max-width: 770px) {.intro_buttons {
-	float: none;
-	width: 6em;
-	margin: auto;
+	.right {
+		display: inline-block;
+		height: 700px;
+		width: 50%;
+		float: right;
+		background-color: #deed0e;
+		background-image: url("Site_Assets/Character_1_Big.jpg");
+		background-repeat: no-repeat;
+		background-position: center top;
+
+	}
+	.white_space {
+		display: block;
+		background-color: #fff;
+		width: 100%;
+		height: 200px;
+	}
+	.top {
+		display: none;
+	}
+	.relative {
+		margin:auto;
+	}
+	.intro_buttons {
+		margin-bottom: 2em;
+		float: right;
+		margin-right: -3em;
 	}
 }
