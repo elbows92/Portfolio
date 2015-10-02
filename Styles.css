@@ -115,7 +115,7 @@ img {
 .large_project_text {
 	position: absolute;
 	margin-top: -2em;
-	margin-left: 1em;
+	margin-left: 2em;
 	padding-right: 1em;
 	height: 100%;
 	
@@ -152,32 +152,16 @@ img {
 .square_text p{
 	margin: 0;
 }
-.spacer {
+.space_1 {
+	margin-top: 3em;
+}
+.space_2 {
 	margin-top: 3em;
 }
 a:hover {
 	color: #dad7ae !important;
 }
 
-/*Project ID's */
-#hune {
-	background-image: url("Site_Assets/Hune_Project_Big.jpg");
-}
-#found {
-	background-image: url("Site_Assets/EF_Found_Project.jpg");
-}
-#fiber {
-	background-image: url("Site_Assets/EF_Found_Project.jpg");
-}
-#fractal {
-	background-image: url("Site_Assets/EF_Found_Project.jpg");
-}
-#moon {
-	background-image: url("Site_Assets/Hune_Project_Big.jpg");
-}
-#h2h {
-	background-image: url("Site_Assets/Hune_Project_Big.jpg");
-}
 /* Medium and up */
 
 @media (min-width: 40.0625em) {
@@ -191,17 +175,18 @@ a:hover {
 		height: 200px;
 	}
 	.slide {
-		height: 100%;
+		display: inline-block;
+		/*height: 100%;
 		position: absolute;
 		right: 0;
 		top: 0;
 		display: inline-block;
 		background-image: url("Site_Assets/Character_1_Big.jpg");
 		background-repeat: no-repeat;
-		background-position: center top;
+		background-position: center top;*/
 	}
-	.spacer {
-		margin-top: 4em;
+	.space_1 {
+		margin-top: 5em;
 	}
 	.intro_buttons {
 		position: relative;
@@ -216,7 +201,7 @@ a:hover {
 	.top {
 		display: none;
 	}
-	.spacer {
+	.space_1 {
 		margin-top: 8em;
 	}
 }
