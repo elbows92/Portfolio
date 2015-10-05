@@ -1,0 +1,81 @@
+.main {
+    margin: 0 auto;
+    width: 900px;
+}
+.banner {
+    background-color: #333333;
+    color: #fefefe;
+    padding: 20px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.title {
+    font-size: 140%;
+    font-weight: bold;
+}
+.header {
+    background-color: #eee;
+    padding: 20px;
+}
+.header.scroll-to-fixed-fixed {
+    color: red;
+}
+.content {
+    padding: 20px;
+    overflow: hidden;
+}
+.footer {
+/*    background-color: #eee;
+    padding: 20px;*/
+    clear: both;
+}
+.footer.scroll-to-fixed-fixed {
+    color: red;
+}
+.footer-content {
+    background-color: #aaa;
+    padding: 20px;
+}
+.demos li {
+    margin-bottom: 20px;
+}
+.left {
+    float: left;
+    width: 680px;
+}
+.right {
+    float: left;
+    margin-left: 40px;
+}
+.summary {
+    border: 1px solid #dddddd;
+    overflow: hidden;
+    margin-top: 20px;
+    background-color: white;
+}
+.summary .caption {
+    border-bottom: 1px solid #dddddd;
+    background-color: #dddddd;
+    font-size: 12pt;
+    font-weight: bold;
+    padding: 5px;
+}
+.summary.scroll-to-fixed-fixed {
+    margin-top: 0px;
+}
+.summary.scroll-to-fixed-fixed .caption {
+    color: red;
+}
+.contents {
+    width: 150px;
+    margin: 10px;
+    font-size: 80%;
+}
+#test {
+    background: #f00;
+}
+#wrapper {
+    border:10px solid green;
+    height: 800px;
+    padding-top:50px;
+}

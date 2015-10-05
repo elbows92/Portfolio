@@ -13,19 +13,101 @@
         <link rel="stylesheet" type="css" href="styles/foundation-essentials-5.5.2/css/foundation.css">
         <link rel="stylesheet" type="css" href="styles/foundation-essentials-5.5.2/css/normalize.css">
         <link rel="stylesheet" type="css" href="styles/slideshow.css">
+        <link rel="stylesheet" type="css" href="styles/scroll.css">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="scripts/scripts.js"></script>
+<script src="scripts/jquery-scrolltofixed.js"></script>
+<script>
+    $(document).ready(function() {
+
+        // Dock the header to the top of the window when scrolled past the banner.
+        // This is the default behavior.
+
+        $('.header').scrollToFixed();
+
+
+        // Dock the footer to the bottom of the page, but scroll up to reveal more
+        // content if the page is scrolled far enough.
+
+        $('.footer').scrollToFixed( {
+            bottom: 0,
+            limit: $('.footer').offset().top
+        });
+
+
+        // Dock each summary as it arrives just below the docked header, pushing the
+        // previous summary up the page.
+
+        var summaries = $('.summary');
+        summaries.each(function(i) {
+            var summary = $(summaries[i]);
+            var next = summaries[i + 1];
+
+            summary.scrollToFixed({
+                marginTop: $('.header').outerHeight(true) + 10,
+                limit: function() {
+                    var limit = 0;
+                    if (next) {
+                        limit = $(next).offset().top - $(this).outerHeight(true) - 10;
+                    } else {
+                        limit = $('.footer').offset().top - $(this).outerHeight(true) - 10;
+                    }
+                    return limit;
+                },
+                zIndex: 999
+            });
+        });
+    });
+</script>
+
     </head>
     <body>
-       
-        <section id="intro">
+   <ul>
+    
+    <!--     <li class="header">
+            <div class="main"><span class="title">Header</span><span> - This header will dock to the top of the window.</span></div>
+        </li> -->
+        <li class="content main">
+            <ul>
+              
+              
+            
+                    <ul id="summary1" class="summary">
+                        ljkljkkjl
+                    </ul>
+ <div class="big_green">
+        </div>
+                    <ul id="summary2" class="summary">
+                        effeeë
+                    </ul>
+ <div class="big_green">
+        </div>
+                    <ul id="summary3" class="summary">
+                        ljkffdsdfssssssss
+                    </ul>
+            
+               
+                
+               
+            </ul>
+        </li>
+        <div class="big_green">
+        </div>
+        <li class="footer">
+            
+        </li>
+        
+    </ul>
+        <!-- <section id="intro">
             <div class="row blue relative full_width">
                 <div class="white_space"></div>
                 <div class="small-12 medium-8 columns">
                     <div class="top"></div> 
                     <div class="intro_container">
                         <div class="intro_blurb">
-                            <span class="title_A">Moon_Tile</span>
+                            <span class="title_C">Moon_Tile</span>
                             <div class="space_3">
                                 <p><span class="lib">Who</span> - personal project</p>
                                 <p><span class="lib">What</span> - industrial design / data visualization</p>
@@ -48,7 +130,16 @@
         </section>
         <section>
             <div class="row full_width chapter" id="1">
-                chapter 1
+                <ul id="summary1" class="testertestee">
+                        <li class="caption">Summary 1</li>
+                        <li class="contents">
+                            <p>There are three floating summaries on the right of this page.  They are anchored to their respective sections.</p>
+
+                            <p>Once a summary reaches the bottom of the header above, it will stop there until the next section summary arrives.  Then, it will continue up the page.</p>
+
+                            <p>The last summary will get pushed up the page by the footer once it undocks to reveal the content below it.</p>
+                        </li>
+                    </ul>
             </div>
             <div class="container">
                 <div class="row">
@@ -63,12 +154,16 @@
                         <p>I started the project by examining the various relationships the moon has with people, wildlife, the environment, and other astronomical bodies.</p>
                     </div>
                     <div class="small-12 small-centered medium-6 medium-uncentered columns space_1">
-                        <img src="Site_Assets/Project_Images/Moon/Moon_Sketch_1.jpg">
+                        <img src="styles/Site_Assets/Project_Images/Moon/Moon_Sketch_1.jpg">
                     </div>
+                </div>
+                <div class="big_green">
+                    nope
                 </div>
             </div>
 
         </section>
+ -->
 
 
 
@@ -90,11 +185,8 @@
 
 
 
+           
 
-
-            <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-            <script src="scripts.js"></script>
-            <script src="foundation-essentials-5.5.2/js/foundation/foundation.equalizer.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     

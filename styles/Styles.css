@@ -96,6 +96,9 @@ img {
 .relative {
 	position: relative;
 }
+.testertestee {
+	background-color: yellow;
+}
 .large_project_text {
 	position: absolute;
 	margin-top: -2em;
@@ -118,9 +121,10 @@ img {
 	padding: 7px;
 	color: #111;
 
-	
-	
-	
+	position: absolute;
+	left: 10%;
+	top: -.5em;
+	z-index: 2;	
 }
 .title_B {
 	font-size: 2em;
@@ -134,6 +138,12 @@ img {
 	top: -.5em;
 	z-index: 2;
 
+}
+.title_C {
+	font-size: 3em;
+	background-color: #deed0e;
+	padding: 7px;
+	color: #111;
 }
 .date {
 	z-index: 1;
@@ -160,7 +170,10 @@ img {
 	margin-top: 9em;
 }
 
-
+.big_green {
+	height: 3000px;
+	background-color: green;
+}
 a:hover {
 	color: #dad7ae !important;
 }
@@ -240,7 +253,7 @@ a:hover {
 		right: 0;
 		top: 0;
 		display: inline-block;
-		background-image: url("Site_Assets/Character_1_Big.jpg");
+
 		background-repeat: no-repeat;
 		background-position: center top;*/
 	}
