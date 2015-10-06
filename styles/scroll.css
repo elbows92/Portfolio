@@ -20,10 +20,6 @@
 .header.scroll-to-fixed-fixed {
     color: red;
 }
-.content {
-    padding: 20px;
-    overflow: hidden;
-}
 .footer {
 /*    background-color: #eee;
     padding: 20px;*/
@@ -36,40 +32,18 @@
     background-color: #aaa;
     padding: 20px;
 }
-.demos li {
-    margin-bottom: 20px;
-}
-.left {
-    float: left;
-    width: 680px;
-}
-.right {
-    float: left;
-    margin-left: 40px;
-}
-.summary {
-    border: 1px solid #dddddd;
+.chapter {
     overflow: hidden;
-    margin-top: 20px;
-    background-color: white;
+    font-size: 1em;
+    margin-left: 20px;
 }
-.summary .caption {
-    border-bottom: 1px solid #dddddd;
-    background-color: #dddddd;
-    font-size: 12pt;
-    font-weight: bold;
-    padding: 5px;
+.chapter.scroll-to-fixed-fixed {
+
+
 }
-.summary.scroll-to-fixed-fixed {
-    margin-top: 0px;
-}
-.summary.scroll-to-fixed-fixed .caption {
-    color: red;
-}
-.contents {
-    width: 150px;
-    margin: 10px;
-    font-size: 80%;
+.chapter.scroll-to-fixed-fixed {
+    background-color: #deed0e;
+    color: #111;
 }
 #test {
     background: #f00;

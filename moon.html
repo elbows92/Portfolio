@@ -40,12 +40,12 @@
         // Dock each summary as it arrives just below the docked header, pushing the
         // previous summary up the page.
 
-        var summaries = $('.summary');
-        summaries.each(function(i) {
-            var summary = $(summaries[i]);
-            var next = summaries[i + 1];
+        var chapters = $('.chapter');
+        chapters.each(function(i) {
+            var chapter = $(chapters[i]);
+            var next = chapters[i + 1];
 
-            summary.scrollToFixed({
+            chapter.scrollToFixed({
                 marginTop: $('.header').outerHeight(true) + 10,
                 limit: function() {
                     var limit = 0;
@@ -64,43 +64,7 @@
 
     </head>
     <body>
-   <ul>
-    
-    <!--     <li class="header">
-            <div class="main"><span class="title">Header</span><span> - This header will dock to the top of the window.</span></div>
-        </li> -->
-        <li class="content main">
-            <ul>
-              
-              
-            
-                    <ul id="summary1" class="summary">
-                        ljkljkkjl
-                    </ul>
- <div class="big_green">
-        </div>
-                    <ul id="summary2" class="summary">
-                        effeeë
-                    </ul>
- <div class="big_green">
-        </div>
-                    <ul id="summary3" class="summary">
-                        ljkffdsdfssssssss
-                    </ul>
-            
-               
-                
-               
-            </ul>
-        </li>
-        <div class="big_green">
-        </div>
-        <li class="footer">
-            
-        </li>
-        
-    </ul>
-        <!-- <section id="intro">
+        <section id="intro">
             <div class="row blue relative full_width">
                 <div class="white_space"></div>
                 <div class="small-12 medium-8 columns">
@@ -129,41 +93,118 @@
             </div>
         </section>
         <section>
-            <div class="row full_width chapter" id="1">
-                <ul id="summary1" class="testertestee">
-                        <li class="caption">Summary 1</li>
-                        <li class="contents">
-                            <p>There are three floating summaries on the right of this page.  They are anchored to their respective sections.</p>
-
-                            <p>Once a summary reaches the bottom of the header above, it will stop there until the next section summary arrives.  Then, it will continue up the page.</p>
-
-                            <p>The last summary will get pushed up the page by the footer once it undocks to reveal the content below it.</p>
-                        </li>
-                    </ul>
+            <div class="space_3"></div>
+            <div class="row full_width">
+                <span class="chapter" id="chapter1">
+                    01 - The Prompt
+                </span>
             </div>
             <div class="container">
-                <div class="row">
-                    <div class="small-12 small-centered medium-8 medium-centered columns space_1">
-                        <h2>How would you communicate the Space Race of 1955 without words?</h2>
-                        <h2>Here’s how I did it.</h2>
+                <div class="space_6">
+                    <div class="row">
+                        <div class="small-12 small-centered medium-8 medium-centered columns">
+                            <span class="title_B">How would you communicate the Space Race of 1955 without words?</span>
+                            <br><br>
+                            <span class="title_B">Here’s how I did it.</span>
+                        </div>
                     </div>
                 </div>
-
-                 <div class="row">
-                    <div class="small-12 small-centered medium-4 medium-uncentered medium-offset-2 columns space_1">
-                        <p>I started the project by examining the various relationships the moon has with people, wildlife, the environment, and other astronomical bodies.</p>
-                    </div>
-                    <div class="small-12 small-centered medium-6 medium-uncentered columns space_1">
-                        <img src="styles/Site_Assets/Project_Images/Moon/Moon_Sketch_1.jpg">
+                <div class="space_3">
+                     <div class="row">
+                        <div class="small-12 small-centered medium-4 medium-uncentered medium-offset-1 columns">
+                            <div class="show-for-medium-up space_9"></div>
+                            <p>I started the project by examining the various relationships the moon has with people, wildlife, the environment, and other astronomical bodies.</p>
+                        </div>
+                        <div class="small-8 small-centered medium-6 medium-uncentered columns">
+                            <img src="styles/Site_Assets/Project_Images/Moon/Moon_Sketch_1.jpg">
+                        </div>
                     </div>
                 </div>
-                <div class="big_green">
-                    nope
+                <div class="space_3">   
+                    <div class="row">
+                        <div class="small-12 small-centered medium-10 columns">
+                            <div class="overlay_picture_title"><span class="title_B">I chose to explore one of the closest relationships people have had with the moon: the Space Race</span></div>
+                            <img src="styles/Site_Assets/Project_Images/Moon/Moon_Pic_2.jpg">
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div class="space_3"></div>
+            <div class="row full_width">
+                <span class="chapter" id="chapter2">
+                    02 - Chasing Sputnik
+                </span>
+            </div>
+            <div class="container">
+                <div class="space_6">
+                    <div class="row">
+                        <div class="small-12 small-centered medium-4 medium-uncentered medium-offset-2 columns">
+                            <p>The immediate challenge at this stage in the project was distilling the volumes of historical data on the Space Race into a collection of data points that I could translate into visual graphics.</p>
+                        </div>
+                        <div class="small-8 small-centered medium-4 medium-uncentered medium-offset-1 columns">
+                            <img src="styles/Site_Assets/Project_Images/Moon/Moon_Pic_9.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="space_3">
+                    <div class="row">
+                        <div class="small-5 small-centered medium-3 columns crafts">
+                            <p><span class="lib">Types of crafts:</span></p>
+                            <p>Orbiter <img src="styles/Site_Assets/Logo.png"></p>
+                            <p>Impactor <img src="styles/Site_Assets/Logo.png"></p>
+                            <p>Fly By <img src="styles/Site_Assets/Logo.png"></p>
+                            <p>Lander <img src="styles/Site_Assets/Logo.png"></p>
+                            <p>Manned <img src="styles/Site_Assets/Logo.png"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="space_6">
+                    <div class="row">
+                        <div class="small-10 small-centered medium-6 medium-uncentered medium-offset-1 columns columns">
+                            <img src="styles/Site_Assets/Project_Images/Moon/Moon_Sketch_6.jpg">
+                        </div>
+                        <div class="small-12 small-centered medium-4 medium-uncentered columns">
+                            <p>After generating structured lists and recordings of the lunar missions, I melded data and design into infographics.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="space_3">
+                    <div class="row">
+                        <div class="small-12 small-centered medium-10 large-8 columns">
+                            <H4>As I ventured further away from written word, I knew I would need a set of guiding motifs that characterized the key themes of the Space Race:</H4>
+                        </div>
+                    </div>
+                </div>
+                <div class="space_3">
+                    <div class="row">
+                        <div class="small-12 small-centered medium-6 large-5 columns">
+                            <p><span class="title_B">Two competing forces</span></p>
+                            <p><span class="title_B">A shared objective</span></p>
+                            <p><span class="title_B">A variety of attempts</span></p>
+                            <p><span class="title_B">One winner</span></p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="space_3"></div>
+            <div class="row full_width">
+                <span class="chapter" id="chapter2">
+                    03 - Making Marks
+                </span>
+            </div>
+            <div class="container">
 
+
+            </div>
+
+
+
+            <div class="footer">
+                
+            </div>
         </section>
- -->
+
 
 
 
