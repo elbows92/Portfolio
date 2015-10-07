@@ -176,6 +176,10 @@ a:hover {
 .relative {
 	position: relative;
 }
+.inline img{
+	display: block;
+	padding-bottom: 1em;
+}
 /* Underline From Left */
 .hvr-underline-from-left {
   display: inline-block;
@@ -271,6 +275,15 @@ a:hover {
 	.crafts img {
 		float: none;
 	}
+	.inline {
+		display: flex;
+		justify-content: space-between;
+	}
+	.inline img {
+		width: 30%;
+		height: 30%;
+	}
+
 }
 /* Large and up */
 

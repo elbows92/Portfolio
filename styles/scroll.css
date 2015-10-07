@@ -14,15 +14,18 @@
     font-weight: bold;
 }
 .header {
+    opacity: 0;
     background-color: #eee;
     padding: 20px;
+    -webkit-transition: opacity 1s;
+    transition: opacity 1s;
 }
 .header.scroll-to-fixed-fixed {
-    color: red;
+    opacity: 1;
+    -webkit-transform: opacity(1);
+    transform: opacity(1);
 }
 .footer {
-/*    background-color: #eee;
-    padding: 20px;*/
     clear: both;
 }
 .footer.scroll-to-fixed-fixed {
@@ -35,15 +38,14 @@
 .chapter {
     overflow: hidden;
     font-size: 1em;
-    margin-left: 20px;
+    margin-left: 6em;
+    background-color: none;
 }
-.chapter.scroll-to-fixed-fixed {
 
-
-}
 .chapter.scroll-to-fixed-fixed {
     background-color: #deed0e;
     color: #111;
+
 }
 #test {
     background: #f00;
