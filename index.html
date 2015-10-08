@@ -13,11 +13,55 @@
         <link rel="stylesheet" type="css" href="styles/foundation-essentials-5.5.2/css/foundation.css">
         <link rel="stylesheet" type="css" href="styles/foundation-essentials-5.5.2/css/normalize.css">
         <link rel="stylesheet" type="css" href="styles/slideshow.css">
+        <link rel="stylesheet" type="css" href="styles/scroll.css">
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="scripts/jquery-scrolltofixed.js"></script>   
+           <script>
+            $(document).ready(function() {
+
+                // Dock the header to the top of the window when scrolled past the banner.
+                // This is the default behavior.
+
+                $('.header').scrollToFixed();
+
+
+                // Dock the footer to the bottom of the page, but scroll up to reveal more
+                // content if the page is scrolled far enough.
+
+                $('.footer').scrollToFixed( {
+                    bottom: 0,
+                    limit: $('.footer').offset().top
+                });
+
+
+                // Dock each summary as it arrives just below the docked header, pushing the
+                // previous summary up the page.
+
+                var chapters = $('.chapter');
+                chapters.each(function(i) {
+                    var chapter = $(chapters[i]);
+                    var next = chapters[i + 1];
+
+                    chapter.scrollToFixed({
+                        marginTop: $('.header').outerHeight(true) + 20,
+                        limit: function() {
+                            var limit = 0;
+                            if (next) {
+                                limit = $(next).offset().top - $(this).outerHeight(true) - 20;
+                            } else {
+                                limit = $('.footer').offset().top - $(this).outerHeight(true) - 10;
+                            }
+                            return limit;
+                        },
+                        zIndex: 999
+                    });
+                });
+            });
+
+            </script>
     </head>
     <body>
-       
         <section id="intro">
             <div class="row grey relative full_width">
                 <div class="small-12 medium-6">
@@ -40,9 +84,6 @@
                                 <span class="lib">learning how to kickflip.</span>
                         </div>
                         <div class="intro_buttons">
-                            <div class="intro_button">
-                                <img src="styles/Site_Assets/Logo.png">
-                            </div>
                             <div class="intro_button" id="scroll_button">
                                 <img src="styles/Site_Assets/Down_Arrow.png">
                             </div>
@@ -60,144 +101,82 @@
                     </ul>
                 </div>
             </div>
-
         </section>
-
+       
         <section class="container" id="projects">
-            <div class="row">
-                <div class="small-12 columns nav"
-                    <div class="logo">
-                        <a href=""><img src=""></a>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                
-                   <!--  <div class="small-12 medium-8 medium-offset-2 columns">
-                        
-                            <div class="large_project_text">
-                                <span class="title_A">Hune</span>
-                                <span class="date">august 2015</span>
-                            </div>
-                            <img src="Site_Assets/Project_Images/640x480.jpg">
-                        
-                    </div> -->
-                    <div class="small-12 medium-8 medium-offset-2 relative">
-                        
+          <div class="row full_width">
+            <div class="header">
+                <img src="styles/Site_Assets/Logo.png"> <span class="contact">contact</span>
+            </div>    
+        </div>
+            <div class="space_home">
+                <div class="row">
+                    <div class="small-12 small-centered medium-8 medium-offset-2 relative">
                             <span class="overlay_large_title title_A">Hune</span>
                             <span class="date">august 2015</span>
-                        
                         <div class="hvr-underline-from-left">
                             <img src="styles/Site_Assets/Project_Images/640x480.jpg">
                         </div>
                     </div>
-                
+                </div>
             </div>
-
-            <div class="row">
-
-                <div class="small-10 small-centered large-3 large-uncentered columns space_1 text">
-                        <p>This is a collection of short form exercises aimed at celebrating the materials chosen to create the form. They include sycamore, jute, and jello.</p>
-                        <p>Yes, Jello.</p>
-                </div>
-
-                <div class="small-8 small-centered medium-4 medium-uncentered large-3 columns space_3">
-              
-                        <span class="overlay_small_title title_B">Fiber Form</span>
-                        <span class="date">august 2015</span>
-                    
-                    <div class="hvr-underline-from-left">
-                        <img class="show-for-small-only line" src="styles/Site_Assets/Project_Images/640x480.jpg">
-                        <img class="show-for-medium-up" src="styles/Site_Assets/Project_Images/500x500.jpg">
+            <div class="space_home">
+                    <div class="row">
+                        <div class="small-12 small-centered medium-5 medium-uncentered medium-offset-1 columns">
+                            <p>This is a collection of short form exercises aimed at celebrating the materials chosen to create the form. They include sycamore, jute, and jello.</p>
+                            <p>Yes, Jello.</p>
+                        </div>
                     </div>
                 </div>
-
-                <div class="small-8 small-centered medium-4 medium-uncentered large-3 columns space_3">
-                    
-                        <span class="overlay_small_title title_B">Found Form</span>
-                        <span class="date">august 2015</span>
-                  
-                    <div class="hvr-underline-from-left">
-                        <img class="show-for-small-only" src="styles/Site_Assets/Project_Images/640x480.jpg">
-                        <img class="show-for-medium-up" src="styles/Site_Assets/Project_Images/500x500.jpg">
-                    </div>
+            <div class="space_1">
+                <div class="row">
+                    <div class="small-12 small-centered medium-uncentered medium-10 medium-offset-1 columns">
+                        <div class="small-8 small-centered medium-4 medium-uncentered space_small columns">               
+                            <span class="overlay_small_title title_B">Fiber Form</span>
+                            <span class="date">august 2015</span>
+                            <div class="hvr-underline-from-left">
+                                <img class="show-for-small-only" src="styles/Site_Assets/Project_Images/640x480.jpg">
+                                <img class="show-for-medium-up" src="styles/Site_Assets/Project_Images/500x500.jpg">
+                            </div>
+                        </div>
+                        <div class="small-8 small-centered medium-4 medium-uncentered space_small columns">
+                            <span class="overlay_small_title title_B">Found Form</span>
+                            <span class="date">august 2015</span>
+                            <div class="hvr-underline-from-left">
+                                <img class="show-for-small-only" src="styles/Site_Assets/Project_Images/640x480.jpg">
+                                <img class="show-for-medium-up" src="styles/Site_Assets/Project_Images/500x500.jpg">
+                            </div>
+                        </div>
+                        <div class="small-8 small-centered medium-4 medium-uncentered space_small columns">
+                            <span class="overlay_small_title title_B">Fractal Form</span>
+                            <span class="date">august 2015</span>
+                            <div class="hvr-underline-from-left">
+                                <img class="show-for-small-only" src="styles/Site_Assets/Project_Images/640x480.jpg">
+                                <img class="show-for-medium-up" src="styles/Site_Assets/Project_Images/500x500.jpg">
+                            </div>
+                        </div>    
+                        </div>
                 </div>
-
-                <div class="small-8 small-centered medium-4 medium-uncentered large-3 columns space_3">
-                    
-                        <span class="overlay_small_title title_B">Fractal Form</span>
-                        <span class="date">august 2015</span>
-                   
-                    <div class="hvr-underline-from-left">
-                        <img class="show-for-small-only" src="styles/Site_Assets/Project_Images/640x480.jpg">
-                        <img class="show-for-medium-up" src="styles/Site_Assets/Project_Images/500x500.jpg">
-                    </div>
-                </div>
-
             </div>
-
-            <div class="row">
-                <div class="small-12 medium-6 medium-offset-0 columns space_3">
-                  
+            <div class="space_home">
+                <div class="row">
+                    <div class="small-12 medium-5 medium-offset-1 columns space_small">
                         <span class="overlay_small_title title_A">Moon_Tile</span>
                         <span class="date">may 2014</span>
-
-                    <div class="hvr-underline-from-left">
-                        <img src="styles/Site_Assets/Project_Images/640x480.jpg">
+                        <div class="hvr-underline-from-left">
+                            <img src="styles/Site_Assets/Project_Images/640x480.jpg">
+                        </div>
                     </div>
-                </div>
-                <div class="small-12 medium-6 medium-offset-0 columns space_3">
-                   
+                    <div class="small-12 medium-5 columns end space_small">
                         <span class="overlay_small_title title_A">Heart 2 Heart</span>
                         <span class="date">june 2015</span>
-
-                    <div class="hvr-underline-from-left">
-                        <img src="styles/Site_Assets/Project_Images/640x480.jpg">
+                        <div class="hvr-underline-from-left">
+                            <img src="styles/Site_Assets/Project_Images/640x480.jpg">
+                        </div>
                     </div>
                 </div>
             </div>
-
-              <div class="row">
-
-                <div class="small-10 small-centered large-3 large-uncentered columns space_1 text">
-                        <p>This is a collection of short form exercises aimed at celebrating the materials chosen to create the form. They include sycamore, jute, and jello.</p>
-                        <p>Yes, Jello.</p>
-                </div>
-
-                <div class="small-8 small-centered medium-4 medium-uncentered large-3 columns space_3">
               
-                        <span class="overlay_small_title title_B">Fiber Form</span>
-                        <span class="date">august 2015</span>
-                    
-                    <div class="hvr-underline-from-left">
-                        <img class="show-for-small-only line" src="styles/Site_Assets/Project_Images/640x480.jpg">
-                        <img class="show-for-medium-up" src="styles/Site_Assets/Project_Images/500x500.jpg">
-                    </div>
-                </div>
-
-                <div class="small-8 small-centered medium-4 medium-uncentered large-3 columns space_3">
-                    
-                        <span class="overlay_small_title title_B">Found Form</span>
-                        <span class="date">august 2015</span>
-                  
-                    <div class="hvr-underline-from-left">
-                        <img class="show-for-small-only" src="styles/Site_Assets/Project_Images/640x480.jpg">
-                        <img class="show-for-medium-up" src="styles/Site_Assets/Project_Images/500x500.jpg">
-                    </div>
-                </div>
-
-                <div class="small-8 small-centered medium-4 medium-uncentered large-3 columns space_3">
-                    
-                        <span class="overlay_small_title title_B">Fractal Form</span>
-                        <span class="date">august 2015</span>
-                   
-                    <div class="hvr-underline-from-left">
-                        <img class="show-for-small-only" src="styles/Site_Assets/Project_Images/640x480.jpg">
-                        <img class="show-for-medium-up" src="styles/Site_Assets/Project_Images/500x500.jpg">
-                    </div>
-                </div>
-
-            </div>
         </section>
 
 
@@ -215,18 +194,9 @@
 
 
 
-
-
-
-
-
-
-
-            
-            <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-            <script src="scripts/scripts.js"></script>
-            <script src="styles/foundation-essentials-5.5.2/js/foundation/foundation.equalizer.js"></script>
-            <script src="scripts/jquery-scrolltofixed.js"></script>
+      
+        
+        <script src="scripts/scripts.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     

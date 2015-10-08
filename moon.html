@@ -16,52 +16,52 @@
         <link rel="stylesheet" type="css" href="styles/scroll.css">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="scripts/scripts.js"></script>
-<script src="scripts/jquery-scrolltofixed.js"></script>
-   <script>
-    $(document).ready(function() {
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="scripts/scripts.js"></script>
+        <script src="scripts/jquery-scrolltofixed.js"></script>
+           <script>
+            $(document).ready(function() {
 
-        // Dock the header to the top of the window when scrolled past the banner.
-        // This is the default behavior.
+                // Dock the header to the top of the window when scrolled past the banner.
+                // This is the default behavior.
 
-        $('.header').scrollToFixed();
-
-
-        // Dock the footer to the bottom of the page, but scroll up to reveal more
-        // content if the page is scrolled far enough.
-
-        $('.footer').scrollToFixed( {
-            bottom: 0,
-            limit: $('.footer').offset().top
-        });
+                $('.header').scrollToFixed();
 
 
-        // Dock each summary as it arrives just below the docked header, pushing the
-        // previous summary up the page.
+                // Dock the footer to the bottom of the page, but scroll up to reveal more
+                // content if the page is scrolled far enough.
 
-        var chapters = $('.chapter');
-        chapters.each(function(i) {
-            var chapter = $(chapters[i]);
-            var next = chapters[i + 1];
+                $('.footer').scrollToFixed( {
+                    bottom: 0,
+                    limit: $('.footer').offset().top
+                });
 
-            chapter.scrollToFixed({
-                marginTop: $('.header').outerHeight(true) + 10,
-                limit: function() {
-                    var limit = 0;
-                    if (next) {
-                        limit = $(next).offset().top - $(this).outerHeight(true) - 10;
-                    } else {
-                        limit = $('.footer').offset().top - $(this).outerHeight(true) - 10;
-                    }
-                    return limit;
-                },
-                zIndex: 999
+
+                // Dock each summary as it arrives just below the docked header, pushing the
+                // previous summary up the page.
+
+                var chapters = $('.chapter');
+                chapters.each(function(i) {
+                    var chapter = $(chapters[i]);
+                    var next = chapters[i + 1];
+
+                    chapter.scrollToFixed({
+                        marginTop: $('.header').outerHeight(true) + 20,
+                        limit: function() {
+                            var limit = 0;
+                            if (next) {
+                                limit = $(next).offset().top - $(this).outerHeight(true) - 20;
+                            } else {
+                                limit = $('.footer').offset().top - $(this).outerHeight(true) - 10;
+                            }
+                            return limit;
+                        },
+                        zIndex: 999
+                    });
+                });
             });
-        });
-    });
 
-    </script>
+            </script>
 
     </head>
     <body>
@@ -95,11 +95,12 @@
         </section>
         <section>
             <!-- <div class="header"><img src="styles/Site_Assets/Logo.png"></div> -->
-            <div class="space_6"></div>
-            <div class="row full_width">
-                <span class="chapter" id="chapter1">
-                    Moon_tile: 01 - The Prompt
-                </span>
+            <div class="space_6">
+                <div class="row full_width">
+                    <span class="chapter" id="chapter1">
+                        Moon_tile: 01 - The Prompt
+                    </span>
+                </div>
             </div>
             <div class="container">
                 <div class="space_3">
@@ -132,11 +133,12 @@
                     </div>
                 </div>
             </div>
-            <div class="space_6"></div>
-            <div class="row full_width">
-                <span class="chapter" id="chapter2">
-                    Moon_tile: 02 - Chasing Sputnik
-                </span>
+             <div class="space_6">
+                <div class="row full_width">
+                    <span class="chapter" id="chapter2">
+                        Moon_tile: 02 - Chasing Sputnik
+                    </span>
+                </div>
             </div>
             <div class="container">
                 <div class="space_3">
@@ -234,11 +236,12 @@
                     </div>
                 </div>
             </div>
-            <div class="space_6"></div>
-            <div class="row full_width">
-                <span class="chapter" id="chapter3">
-                    Moon_tile: 03 - Making Marks
-                </span>
+             <div class="space_6">
+                <div class="row full_width">
+                    <span class="chapter" id="chapter3">
+                        Moon_tile: 03 - Abstractions
+                    </span>
+                </div>
             </div>
             <div class="container">
                 <div class="space_3">
@@ -284,11 +287,12 @@
                     </div>
                 </div>
             </div>
-            <div class="space_6"></div>
-            <div class="row full_width">
-                <span class="chapter" id="chapter4">
-                    Moon_tile: 04 - Giving Form
-                </span>
+             <div class="space_6">
+                <div class="row full_width">
+                    <span class="chapter" id="chapter4">
+                        Moon_tile: 04 - Giving Form
+                    </span>
+                </div>
             </div>
             <div class="container">
                 <div class="space_3">

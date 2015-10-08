@@ -13,18 +13,6 @@
     font-size: 140%;
     font-weight: bold;
 }
-.header {
-    opacity: 0;
-    background-color: #eee;
-    padding: 20px;
-    -webkit-transition: opacity 1s;
-    transition: opacity 1s;
-}
-.header.scroll-to-fixed-fixed {
-    opacity: 1;
-    -webkit-transform: opacity(1);
-    transform: opacity(1);
-}
 .footer {
     clear: both;
 }
@@ -38,13 +26,20 @@
 .chapter {
     overflow: hidden;
     font-size: 1em;
-    margin-left: 6em;
+    padding: 1em;
+    margin-left: 2%;
     background-color: none;
+    border-bottom: solid 1px #111;
+    -webkit-transition: background-color 1s;
+    transition: background-color 1s;
 }
 
 .chapter.scroll-to-fixed-fixed {
-    background-color: #deed0e;
+    background-color: rgba(222,237,14,.7);
     color: #111;
+    border-bottom: none;
+    -webkit-transform: background-color(1);
+    transform: background-color(1);
 
 }
 #test {
