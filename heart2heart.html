@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="css" href="styles/styles.css">
+        <link rel="stylesheet" type="css" href="styles/foundation-essentials-5.5.2/css/foundation.css">
+        <link rel="stylesheet" type="css" href="styles/foundation-essentials-5.5.2/css/normalize.css">
+        <link rel="stylesheet" type="css" href="styles/slideshow.css">
+        <link rel="stylesheet" type="css" href="styles/scroll.css">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="scripts/scripts.js"></script>
+        <script src="scripts/jquery-scrolltofixed.js"></script>
+           <script>
+            $(document).ready(function() {
+
+                // Dock the header to the top of the window when scrolled past the banner.
+                // This is the default behavior.
+
+                $('.header').scrollToFixed();
+
+
+                // Dock the footer to the bottom of the page, but scroll up to reveal more
+                // content if the page is scrolled far enough.
+
+                $('.footer').scrollToFixed( {
+                    bottom: 0,
+                    limit: $('.footer').offset().top
+                });
+
+
+                // Dock each summary as it arrives just below the docked header, pushing the
+                // previous summary up the page.
+
+                var chapters = $('.chapter');
+                chapters.each(function(i) {
+                    var chapter = $(chapters[i]);
+                    var next = chapters[i + 1];
+
+                    chapter.scrollToFixed({
+                        marginTop: $('.header').outerHeight(true) + 20,
+                        limit: function() {
+                            var limit = 0;
+                            if (next) {
+                                limit = $(next).offset().top - $(this).outerHeight(true) - 20;
+                            } else {
+                                limit = $('.footer').offset().top - $(this).outerHeight(true) - 10;
+                            }
+                            return limit;
+                        },
+                        zIndex: 999
+                    });
+                });
+            });
+
+            </script>
+
+    </head>
+    <body>
+        <section id="intro">
+            <div class="row red relative full_width">
+                <div class="white_space"></div>
+                <div class="top"></div> 
+                <div class="small-12 medium-6">
+                    <div class="intro_container">
+                        <div class="intro_blurb">
+                            <span class="title_A">Heart_2_Heart</span>
+                            <div class="space_3">
+                                <p><span class="lib">Who</span> - SapientNitro</p>
+                                <p><span class="lib">What</span> - industrial design / concept</p>
+                                <p><span class="lib">Why</span> - expression</p>
+                                <p><span class="lib">When</span> - june 2015</p>
+
+                            </div>
+                        </div>
+                        <div class="lib_container">
+                            <p>Within the SNAP lab (SapientNitro Accelerated Prototyping), I worked with my colleagues Mo Morales, and Lance Laughlin to create a conceptual product within the realm of biometrics.</p>
+                            <p>We ended up creating a conceptual piece of wearable technology that would allow two people to passively sense each other’s well being. This empathic sensation was achieved by transmitting a person’s heartbeat through subtle vibrations within the wearable device.</p>
+                            <p>My involvement in the project included initial concept ideation, journey mapping, and designing the device.</p>
+                            
+                        </div>
+
+                    </div>
+                </div>
+                <div class="medium-6 columns title_image" id="heart_2_heart">    
+                </div>
+            </div>
+        </section>
+        <section>
+            <!-- <div class="header"><img src="styles/Site_Assets/Logo.png"></div> -->
+            <div class="space_6">
+                <div class="row full_width">
+                    <span class="chapter" id="chapter1">
+                        Heart_2_Heart: 01 - SNAP
+                    </span>
+                </div>
+            </div>
+            <div class="container">
+                <div class="space_6">
+                    <div class="row">
+                        <div class="small-12 small-centered medium-5 medium-uncentered medium-offset-1 columns">
+                            <p>The scope and intent of this project were entirely defined by the format of SNAP, a relatively new institution within SapientNitro. Every month, 3 people from different positions in SapientNitro Boston come together to produce a concept within a randomly chosen field of technology.</p>
+                            <p>The intent of SNAP is to quickly create a wide array of provocative ideas and objects that inspire clients as well as Sapient employees, and spark bigger conversations about Sapient’s design and technological capabilities.</p>
+                            <p>Every SNAP project follows an established “222” workflow: </p>
+                            <p><span class="title_C">2 hours of ideating a direction</span></p>
+                            <p><span class="title_C">2 days of designing the concept</span></p>
+                            <p><span class="title_C">2 weeks of building the prototype</span></p> 
+                        </div>
+                        <div class="small-8 small-centered medium-3 medium-offset-1 medium-uncentered columns end">
+                            <img src="styles/Site_Assets/Project_Images/H2H/Snap_Logo.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="space_6">
+                <div class="row full_width">
+                    <span class="chapter" id="chapter2">
+                        Heart_2_Heart: 02 - Finding Direction
+                    </span>
+                </div>
+            </div>
+            <div class="container">
+                <div class="space_6">
+                    <div class="row">
+                        <div class="small-12 small-centered medium-5 medium-uncentered medium-offset-1 columns">
+                            <p>After deciding the explore the realm of biometrics and gathering all the ideas generated from group ideation sessions, the team and I set out to create three distinct concepts that we could build. This process involved a large collaborative mind map:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="space_3">
+                    <div class="row">
+                        <div class="small-12 small-centered medium-10 columns">
+                            <img src="styles/Site_Assets/Project_Images/H2H/Biometrics.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="space_3">
+                    <div class="row">
+                        <div class="small-12 small-centered medium-5 medium-uncentered medium-offset-1 columns">
+                            <p>The three of us each took an idea from this excercise and heralded it infront of a panel of managers as a means of quickly choosing the most promising direction. The idea that was “greenlighted” was Heart 2 Heart.</p>
+                        </div>
+                        <div class="small-8 small-centered medium-5 medium-uncentered columns end">
+                            <img src="styles/Site_Assets/Project_Images/H2H/Heart_2_Heart.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="space_6">
+                <div class="row full_width">
+                    <span class="chapter" id="chapter3">
+                        Heart_2_Heart: 03 - Passive Empathy
+                    </span>
+                </div>
+            </div>
+            <div class="container">
+                <div class="space_6">
+                    <div class="row">
+                        <div class="small-12 small-centered medium-5 medium-uncentered medium-offset-1 columns">
+                            <p>Before any code was written or any parts were fabricated, we needed to understand the story and context this device would live in. I sketched out several journey maps that featured relationships where a constant, yet passive connection between two people would be valuable.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="space_3">
+                    <div class="row">
+                        <div class="small-12 small-centered medium-10 columns">
+                            <img src="styles/Site_Assets/Project_Images/H2H/H2H_Scan_1.jpg">
+                        </div>
+                    </div>
+                </div>
+                 <div class="space_3">
+                    <div class="row">
+                        <div class="small-12 small-centered medium-10 columns">
+                            <img src="styles/Site_Assets/Project_Images/H2H/H2H_Scan_2.jpg">
+                        </div>
+                    </div>
+                </div>
+             <div class="space_6">
+                <div class="row full_width">
+                    <span class="chapter" id="chapter4">
+                        Heart_2_Heart: 04 - Feeling the Beat
+                    </span>
+                </div>
+            </div>
+            <div class="container">
+                <div class="space_6">
+                    <div class="row">
+                        <div class="small-12 small-centered medium-10 columns">
+                            <img src="styles/Site_Assets/Project_Images/H2H/H2H_Scan_6.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="space_3">
+                    <div class="row">
+                        <div class="small-12 small-centered medium-10 columns">
+                            <img src="styles/Site_Assets/Project_Images/H2H/H2H_Scan_3.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="space_3">
+                    <div class="row">
+                        <div class="small-12 small-centered medium-10 columns">
+                            <img src="styles/Site_Assets/Project_Images/H2H/H2H_Scan_4.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="space_6">
+                <div class="row full_width">
+                    <span class="chapter" id="chapter5">
+                        Heart_2_Heart: 05 - Warm and Fuzzy
+                    </span>
+                </div>
+            </div>
+            <div class="container">
+                <div class="space_6">
+                    <div class="row">
+                        <div class="small-12 small-centered medium-5 medium-uncentered medium-offset-1 columns">
+                            <p>here's the process of creating the housing for the electronics.</p>
+                        </div>
+                        <div class="small-12 small-centered medium-5 medium-uncentered columns end">
+                            <img src="styles/Site_Assets/Project_Images/H2H/Photo_2.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="space_3">
+                    <div class="row">
+                        <div class="small-12 small-centered medium-5 medium-uncentered medium-offset-6 columns end">
+                            <img src="styles/Site_Assets/Project_Images/H2H/Rhino.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="space_3">
+                    <div class="row">
+                        <div class="small-12 small-centered medium-5 medium-uncentered medium-offset-6 columns end">
+                            <img src="styles/Site_Assets/Project_Images/H2H/Photo_1.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="space_3">
+                    <div class="row">
+                        <div class="small-12 small-centered medium-5 medium-uncentered medium-offset-1 columns">
+                            <p>Felt felt felt felt felt</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="space_1">
+                    <div class="row">
+                        <div class="small-12 small-centered medium-10 columns">
+                            <img src="styles/Site_Assets/Project_Images/H2H/Felt_Process.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="space_6">
+                <div class="row full_width">
+                    <span class="chapter" id="chapter5">
+                        Heart_2_Heart: 06 - Final Form
+                    </span>
+                </div>
+            </div>
+            <div class="container">
+                <div class="space_6">
+                    <div class="row">
+                        <div class="small-12 small-centered medium-10 columns">
+                            <img src="styles/Site_Assets/Project_Images/H2H/H2H_Product_Shot10_Lo.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="space_3">
+                    <div class="row">
+                        <div class="small-12 small-centered medium-10 columns">
+                            <img src="styles/Site_Assets/Project_Images/H2H/H2H_Product_Shot07_Lo.jpg">
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+            <div class="footer">
+                
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+           
+
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    
+    </body>

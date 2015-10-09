@@ -36,6 +36,9 @@ img {
 .blue {
 	background-color: #daedea;
 }
+.red {
+	background-color: #C98589;
+}
 .slide {
 	display: none;	
 }
@@ -66,14 +69,14 @@ img {
 }
 .lib_container {
 	margin-top: 1em;
-	margin-bottom: 3em;
+	margin-bottom: 6em;
 }
 .lib {
 	background-color: #deed0e;
 	color: #111;
 }
 .intro_buttons {
-	margin-bottom: 2em;
+	margin-bottom: none;
 	width: 6em;
 	margin: auto;
 }
@@ -81,7 +84,7 @@ img {
 	width: 6em;
 	height: 2em;
 	background-color: #deed0e;
-	margin-bottom: 2em;
+	margin-bottom: 4em;
 	border-radius: 1em;
 	text-align: center;
 }
@@ -128,6 +131,7 @@ img {
 	background-color: #deed0e;
 	padding: 7px;
 	color: #111;
+	line-height: 1.3em;
 }
 .title_B {
 	font-size: 2em;
@@ -152,20 +156,41 @@ img {
 }
 .overlay_small_title {
 	position: absolute;
+	top: -1.5em;
 	left: 15%;
-	top: -.5em;
+	right: 7.5%;
+	z-index: 2;
+}
+.overlay_medium_title {
+	position: absolute;
+	top: -2em;
+	left: 10%;
+	right: 5%;
 	z-index: 2;
 }
 .overlay_large_title {
 	position: absolute;
-	left: 10%;
-	top: -.5em;
+	top: -2em;
+	left: 7%;
+	right: 3.5%;
 	z-index: 2;
 }
-.date {
+.date_small {
 	z-index: 1;
 	bottom: 1em;
 	left: 15%;
+	position: absolute;
+}
+.date_medium {
+	z-index: 1;
+	bottom: 1em;
+	left: 10%;
+	position: absolute;
+}
+.date_large {
+	z-index: 1;
+	bottom: 1em;
+	left: 7%;
 	position: absolute;
 }
 .text {
