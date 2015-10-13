@@ -33,11 +33,17 @@ img {
 .grey {
 	background-color: #c6c8c8;
 }
+.grey_2 {
+	background-color: #E0E0E0;
+}
 .blue {
 	background-color: #daedea;
 }
 .red {
 	background-color: #C98589;
+}
+.green {
+	background-color: #9DC4B4;
 }
 .slide {
 	display: none;	
