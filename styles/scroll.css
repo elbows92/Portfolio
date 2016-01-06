@@ -29,7 +29,6 @@
     padding: 1em;
     margin-left: 2%;
     background-color: none;
-    border-bottom: solid 1px #111;
     -webkit-transition: background-color 1s;
     transition: background-color 1s;
 }
@@ -37,7 +36,6 @@
 .chapter.scroll-to-fixed-fixed {
     background-color: rgba(222,237,14,.7);
     color: #111;
-    border-bottom: none;
     -webkit-transform: background-color(1);
     transform: background-color(1);
 
