@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="css" href="styles/styles.css">
+        <link rel="stylesheet" type="css" href="styles/foundation-essentials-5.5.2/css/foundation.css">
+        <link rel="stylesheet" type="css" href="styles/foundation-essentials-5.5.2/css/normalize.css">
+        <link rel="stylesheet" type="css" href="styles/slideshow.css">
+        <link rel="stylesheet" type="css" href="styles/scroll.css">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="scripts/scripts.js"></script>
+        <script src="scripts/jquery-scrolltofixed.js"></script>
+           <script>
+            $(document).ready(function() {
+
+                // Dock the header to the top of the window when scrolled past the banner.
+                // This is the default behavior.
+
+                $('.header').scrollToFixed();
+
+
+                // Dock the footer to the bottom of the page, but scroll up to reveal more
+                // content if the page is scrolled far enough.
+
+                $('.footer').scrollToFixed( {
+                    bottom: 0,
+                    limit: $('.footer').offset().top
+                });
+
+
+                // Dock each summary as it arrives just below the docked header, pushing the
+                // previous summary up the page.
+
+                var chapters = $('.chapter');
+                chapters.each(function(i) {
+                    var chapter = $(chapters[i]);
+                    var next = chapters[i + 1];
+
+                    chapter.scrollToFixed({
+                        marginTop: $('.header').outerHeight(true) + 20,
+                        limit: function() {
+                            var limit = 0;
+                            if (next) {
+                                limit = $(next).offset().top - $(this).outerHeight(true) - 20;
+                            } else {
+                                limit = $('.footer').offset().top - $(this).outerHeight(true) - 10;
+                            }
+                            return limit;
+                        },
+                        zIndex: 999
+                    });
+                });
+            });
+
+            </script>
+
+    </head>
+    <body>
+        <section id="intro">
+            <div class="row yellow relative full_width">
+                <div class="white_space"></div>
+                <div class="top"></div> 
+                <div class="small-12 medium-6">
+                    <div class="intro_container">
+                        <div class="intro_blurb">
+                            <span class="title_A">Mapping_A_Journey</span>
+                            <div class="space_3">
+                                <p><span class="lib">Who</span> - SapientNitro</p>
+                                <p><span class="lib">What</span> - service design / experience sketching</p>
+                                <p><span class="lib">Why</span> - client project</p>
+                                <p><span class="lib">When</span> - january 2015</p>
+
+                            </div>
+                        </div>
+                        <div class="lib_container">
+                            <p>My team and I were tasked with redesigning the life insurance account opening process to attract more agents, transform underwriting, and align workstreams. These goals were based off of several key insights made by the company, which described a system with many duplicative processes, and a lack of understanding of emerging agent demographics.</p> 
+
+                            <p>My roles in this project included preliminary research, persona generation, workshop preparation, and experience storyboarding.</p>
+                            
+                        </div>
+
+                    </div>
+                </div>
+                <div class="medium-6 columns title_image" id="heart_2_heart">    
+                </div>
+            </div>
+        </section>
+        <section>
+            <!-- <div class="header"><img src="styles/Site_Assets/Logo.png"></div> -->
+            <div class="space_6">
+                <div class="row full_width">
+                    <div class="chapter_box">
+                        <span class="chapter" id="chapter1">
+                            Mapping_A_Journey: 01 - Research
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="space_6">
+                    <div class="row">
+                        <div class="small-12 small-centered medium-5 medium-uncentered medium-offset-1 columns">
+                            <p>The client provided us with 3rd party reports on customer demographics that life insurance agents interact with, as well as first hand customer interviews. Although our primary focus during this project was the agent, knowing the expectations and behaviors of their customers rounded out our understanding of an agent’s work life.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="space_6">
+                <div class="row full_width">
+                    <div class="chapter_box">
+                        <span class="chapter" id="chapter2">
+                            Mapping_A_Journey: 02 - Persona Generation
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="space_6">
+                    <div class="row">
+                        <div class="small-12 small-centered medium-7 columns">
+                            <p>The main question we sought to answer through researching agents was: who will be the life insurance agent of the future? We answered this question by creating a set of archetypes representing past, current, and future agents. These were mapped against our preliminary customer research, and provided the basis for future strategic decisions.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 small-centered medium-10 columns">
+                            <img src="styles/Site_Assets/Project_Images/Journey/Paul_Persona.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="space_6">
+                <div class="row full_width">
+                    <div class="chapter_box">
+                        <span class="chapter" id="chapter3">
+                            Mapping_A_Journey: 03 - Journey Map
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="space_6">
+                    <div class="row">
+                        <div class="small-12 small-centered medium-5 medium-uncentered medium-offset-1 columns">
+                            <p>After establishing a high level understanding of how life insurance agents conduct their business, we shifted our attention to the process of buying life insurance as a whole.</p>
+                            <p>The best tool for this job was a combination of a service blueprint and a customer journey map. The format of a service blueprint would adequately capture the complexity of buying life insurance including front and back stage processes. Incorporating elements of a customer journey map would allow us to stay focused on the customer, their interactions with the agent, and touch points that warrant design intervention. These methods are described in greater detail at Cooper.</p>
+                        </div>
+                        <div class="small-12 small-centered medium-5 medium-uncentered end columns">
+                            <img src="styles/Site_Assets/Project_Images/Journey/FS_Journey_Template_Short.jpg">
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="space_6">
+                    <div class="row">
+                        <div class="small-12 small-centered medium-5 medium-uncentered medium-offset-1 columns">
+                            <p>My team and I filled out these diagrams as best we could, but we’re not experts on life insurance; our clients are. That’s why we structured a workshop around this service journey map where a large group of clients filled copies of them out with post-its and annotations.</p> 
+                        </div>
+                        <div class="small-12 small-centered medium-5 medium-uncentered end columns">
+                            <p>To generate a broader set of responses, we divided the participants of the workshop into 5 groups and gave them different prompts; The prompts included situations where speed and efficiency was the highest priority, the agent was new and inexperienced, the customer was high maintenance, etc.</p> 
+                        </div>
+                    </div>
+                </div>
+                <div class="space_3">
+                    <div class="row">
+                        <div class="small-12 small-centered columns">
+                            <div class="small-4 columns">
+                                <img src="styles/Site_Assets/Project_Images/Journey/Variation_Speed.jpg">
+                            </div>
+                            <div class="small-4 columns">
+                                <img src="styles/Site_Assets/Project_Images/Journey/Variation_Lazy.jpg">
+                            </div>
+                            <div class="small-4 columns">
+                                <img src="styles/Site_Assets/Project_Images/Journey/Variation_Helicopter.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="space_3">
+                    <div class="row">
+                        <div class="small-12 small-centered medium-7 columns end">
+                            <p>The unique interpretations of the journey generated from the prompts led to intergroup discussions and collaboration, as well as a broader set of data we could base our final journey map on. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="space_6">
+                <div class="row full_width">
+                    <div class="chapter_box">
+                        <span class="chapter" id="chapter4">
+                            Mapping_A_Journey: 04 - Storyboarding
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="space_6">
+                    <div class="row">
+                        <div class="small-12 small-centered medium-5 medium-uncentered medium-offset-1 columns">
+                            <p>Creating a final, future state version of the journey map wasn’t difficult after compiling the comprehensive results from the workshop. However, the journey map was dense with information and spanned seven feet long; we needed a more easily digestible form of this journey. This took the form of annotated storyboards.</p> 
+                        </div>
+                        <div class="small-12 small-centered medium-5 medium-uncentered end columns">
+                            <p>The style of illustration used in this first draft of storyboarding as well as the variation prompts was purposefully rough, blocky, and fast. This style afforded me the speed to keep up with the rapid iterations and edits of the journey we co created with the client.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="space_3">
+                    <div class="row">
+                        <div class="small-12 small-centered medium-10 columns">
+                            <div class="small-4 columns">
+                                <img src="styles/Site_Assets/Project_Images/Journey/Sketch_1.jpg">
+                            </div>
+                            <div class="small-4 columns">
+                                <img src="styles/Site_Assets/Project_Images/Journey/Sketch_2.jpg">
+                            </div>
+                            <div class="small-4 columns">
+                                <img src="styles/Site_Assets/Project_Images/Journey/Sketch_3.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                   <div class="space_6">
+                    <div class="row">
+                        <div class="small-12 small-centered medium-7 columns end">
+                            <p>After the initial version was approved by the client, I created more detailed storyboard illustrations that would be shared internally to describe the new vision of life insurance account opening.</p> 
+                        </div>
+                    </div>
+                </div>
+                <div class="space_1">
+                    <div class="row">
+                        <div class="small-12 small-centered medium-10 columns">
+                            <img src="styles/Site_Assets/Project_Images/Journey/Board_1.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="space_1">
+                    <div class="row">
+                        <div class="small-12 small-centered medium-10 columns">
+                            <img src="styles/Site_Assets/Project_Images/Journey/Board_2.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="space_1">
+                    <div class="row">
+                        <div class="small-12 small-centered medium-10 columns">
+                            <img src="styles/Site_Assets/Project_Images/Journey/Board_3.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+           
+
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    
+    </body>
