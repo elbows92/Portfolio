@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="css" href="styles/styles.css">
+        <link rel="stylesheet" type="css" href="styles/foundation-essentials-5.5.2/css/foundation.css">
+        <link rel="stylesheet" type="css" href="styles/foundation-essentials-5.5.2/css/normalize.css">
+        <link rel="stylesheet" type="css" href="styles/slideshow.css">
+        <link rel="stylesheet" type="css" href="styles/scroll.css">
+        <link rel="stylesheet" type="css" href="styles/hover.css">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="scripts/scripts.js"></script>
+        <script src="scripts/jquery-scrolltofixed.js"></script>
+           <script>
+            $(document).ready(function() {
+
+                // Dock the header to the top of the window when scrolled past the banner.
+                // This is the default behavior.
+
+                $('.header').scrollToFixed();
+
+
+                // Dock the footer to the bottom of the page, but scroll up to reveal more
+                // content if the page is scrolled far enough.
+
+                $('.footer').scrollToFixed( {
+                    bottom: 0,
+                    limit: $('.footer').offset().top
+                });
+
+
+                // Dock each summary as it arrives just below the docked header, pushing the
+                // previous summary up the page.
+
+                var chapters = $('.chapter');
+                chapters.each(function(i) {
+                    var chapter = $(chapters[i]);
+                    var next = chapters[i + 1];
+
+                    chapter.scrollToFixed({
+                        marginTop: $('.header').outerHeight(true) + 20,
+                        limit: function() {
+                            var limit = 0;
+                            if (next) {
+                                limit = $(next).offset().top - $(this).outerHeight(true) - 20;
+                            } else {
+                                limit = $('.footer').offset().top - $(this).outerHeight(true) - 10;
+                            }
+                            return limit;
+                        },
+                        zIndex: 999
+                    });
+                });
+            });
+
+            </script>
+
+    </head>
+    <body>
+        <section id="intro">
+            <div class="fixed_logo">
+                <a href="index.html#projects"><img src="styles/Site_Assets/Logo.png"></a>
+            </div>
+                <div class="white_space"></div>
+                <div class="row service_background full_width">
+                    <div class="small-11 small-centered columns overlap">
+                        <div class="row"><span class="title_A">Process: Service Design</span></div>
+                        <div class="space_3">
+                            <div class="row">
+                                <div class="small-12 medium-7 columns end bottom_border">
+                                    <table>
+                                        <tr>
+                                            <td><span class="lib">Who:</span></td>
+                                            <td>financial services company</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="lib">What:</span></td>
+                                            <td>service design / experience sketching</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="lib">When:</span></td>
+                                            <td>December 2015</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space_3">
+                            <div class="row">
+                                <div class="small-12 medium-7 columns end">
+                                    <p>My team and I were tasked with redesigning the life insurance account opening process of a financial services company to attract more agents, transform underwriting, and align workstreams. These goals were based off of several key insights made by the company, which described a system with many duplicative processes, and a lack of understanding of emerging agent demographics.</p> 
+
+                                    <p>My roles in this project included preliminary research, persona generation, workshop preparation, and experience storyboarding.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+        </section>
+        <section>
+            <div class="space_6 show-for-medium-up">
+               <div class="row full_width">
+                    <div class="chapter_box">
+                        <span class="chapter" id="chapter1">
+                            Service Design: 01 - Agent of the Future
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="space_6 show-for-small-only">
+                <span class="chapter_mobile">
+                    Service Design: 01 - Agent of the Future
+                </span>
+            </div>
+            <div class="container">
+                <div class="space_6">
+                    <div class="row">
+                        <div class="small-12 small-centered medium-5 medium-uncentered medium-offset-1 large-6 large-offset-0 columns">
+                            <p>The client provided us with third party reports on customer demographics that life insurance agents interact with, as well as first hand customer interviews. Although our primary focus during this project was the agent, knowing the expectations and behaviors of their customers rounded out our understanding of an agent’s work life.</p>
+                        </div>
+                        <div class="small-12 small-centered medium-5 medium-uncentered large-6 end columns">
+                            <p>More reports on agent demographics and interviews with agents created a full picture of what characteristics current agents embody. Using this knowledge, we inferred whom the agent of the future would be, in terms of their client interfacing behaviors, usage of technology, and ethnographic background. We presented these findings in the form of persona sheets.</p>
+                        </div>
+                      
+                    </div>
+                    <div class="row">
+                        <div class="small-12 small-centered medium-10 large-12 columns">
+                            <img src="styles/Site_Assets/Project_Images/Service_Design/Paul_Persona.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="space_6 show-for-medium-up">
+                <div class="row full_width">
+                    <div class="chapter_box">
+                        <span class="chapter" id="chapter2">
+                            Service Design: 02 - Journey Map
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="space_6 show-for-small-only">
+                <span class="chapter_mobile">
+                    Service Design: 02 - Journey Map
+                </span>
+            </div>
+            <div class="container">
+                <div class="space_6">
+                    <div class="row">
+                        <div class="small-12 small-centered medium-5 medium-uncentered medium-offset-1 large-6 large-offset-0 columns">
+                            <p>After establishing a high level understanding of how life insurance agents conduct their business, we shifted our attention to the process of buying life insurance as a whole.</p>
+                            <p>A service blueprint captures all of the key stages of a service across front and backstage platforms. In contrast, a journey map focuses on a customer’s experience as they move through the different touchpoints of a service. Using both would provide a clear view of the service, while retaining an emphasis on the interactions between customers and agents, and touch points that warrant design intervention. These methods are described in greater detail at <span class="lib"><a href="http://www.cooper.com/journal/2015/5/journey-map-or-service-blueprint">Cooper</a></span>.</p>
+                        </div>
+                        <div class="small-12 small-centered medium-5 medium-uncentered large-6 end columns">
+                            <img src="styles/Site_Assets/Project_Images/Service_Design/FS_Journey_Template_Short.jpg">
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="space_6">
+                    <div class="row">
+                        <div class="small-12 small-centered medium-5 medium-uncentered medium-offset-1 large-6 large-offset-0 columns">
+                            <p>My team and I filled out these diagrams as best we could, but we’re not experts on life insurance; our clients are. That’s why we structured a workshop around this service journey map where a large group of clients filled copies of them out with post-its and annotations.</p> 
+                        </div>
+                        <div class="small-12 small-centered medium-5 medium-uncentered large-6 end columns">
+                            <p>To generate a broader set of responses, we divided the participants of the workshop into 5 groups and gave them different prompts. The prompts included situations where speed and efficiency was the highest priority, the agent was new and inexperienced, the customer was high maintenance, etc.</p> 
+                        </div>
+                    </div>
+                </div>
+                <div class="space_3">
+                    <div class="row">
+                        <div class="small-12 small-centered columns">
+                            <div class="small-4 columns">
+                                <img src="styles/Site_Assets/Project_Images/Service_Design/Variation_Speed.jpg">
+                            </div>
+                            <div class="small-4 columns">
+                                <img src="styles/Site_Assets/Project_Images/Service_Design/Variation_Lazy.jpg">
+                            </div>
+                            <div class="small-4 columns">
+                                <img src="styles/Site_Assets/Project_Images/Service_Design/Variation_Helicopter.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="space_3">
+                    <div class="row">
+                        <div class="small-12 small-centered medium-10 large-12 columns end center">
+                            <span class="title_C">The unique interpretations of the journey generated from the prompts led to intergroup discussions and collaboration, as well as a broader set of data we could base our final journey map on.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="space_6 show-for-medium-up">
+                <div class="row full_width">
+                    <div class="chapter_box">
+                        <span class="chapter" id="chapter3">
+                            Service Design: 03 - Storyboarding
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="space_6 show-for-small-only">
+                <span class="chapter_mobile">
+                    Service Design: 03 - Storyboarding
+                </span>
+            </div>
+            <div class="container">
+                <div class="space_6">
+                    <div class="row">
+                        <div class="small-12 small-centered medium-5 medium-uncentered medium-offset-1 large-6 large-offset-0 columns">
+                            <p>Creating a final, future state version of the journey map wasn’t difficult after compiling the comprehensive results from the workshop. However, the journey map was dense with information and spanned seven feet long; we needed a more easily digestible form of this journey. This took the form of annotated storyboards.</p> 
+                        </div>
+                        <div class="small-12 small-centered medium-5 medium-uncentered large-6 end columns">
+                            <p>The style of illustration used in this first draft of storyboarding as well as the variation prompts was purposefully rough, blocky, and fast. This style afforded me the speed to keep up with the rapid iterations and edits of the journey we co created with the client.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="space_3">
+                    <div class="row">
+                        <div class="small-12 small-centered medium-10 large-12 columns">
+                            <div class="small-4 columns">
+                                <img src="styles/Site_Assets/Project_Images/Service_Design/Sketch_1.jpg">
+                            </div>
+                            <div class="small-4 columns">
+                                <img src="styles/Site_Assets/Project_Images/Service_Design/Sketch_2.jpg">
+                            </div>
+                            <div class="small-4 columns">
+                                <img src="styles/Site_Assets/Project_Images/Service_Design/Sketch_3.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                   <div class="space_6">
+                    <div class="row">
+                        <div class="small-12 small-centered medium-5 medium-uncentered medium-offset-1 large-6 large-offset-0 columns end">
+                            <p>After the initial version was approved by the client, I created more detailed storyboard illustrations that would be shared internally to describe the new vision of life insurance account opening.</p> 
+                            
+
+                        </div>
+
+                    </div>
+                </div>
+                    <div class="row">
+                        <div class="small-12 small-centered medium-10 large-12 columns">
+                            <img src="styles/Site_Assets/Project_Images/Service_Design/Board_1.jpg">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 small-centered medium-10 large-12 columns">
+                            <img src="styles/Site_Assets/Project_Images/Service_Design/Board_2.jpg">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 small-centered medium-10 large-12 columns">
+                            <img src="styles/Site_Assets/Project_Images/Service_Design/Board_3.jpg">
+                        </div>
+                    </div>
+            </div>
+
+            <div class="footer">
+                
+            </div>
+        </section>
+        <div class="space_9"></div>
+        <div class="footer_section">
+            <div class="footer_left">
+                <a href="client_sketching.html"><div class="intro_button hvr-left">
+                    <img src="styles/Site_Assets/Left_Arrow.png">
+                </div></a>
+            </div>
+            <div class="footer_center">
+                <div class="intro_button hvr-grow">
+                    <p><a href="mailto:cbarber92@gmail.com?Subject=Howdy" target="_top">Say Howdy</a></p>
+                </div>
+                <div class="footer_text"><p>Charlie Barber 2016</p></div>
+            </div>
+            <div class="footer_right">
+                <a href="moon.html"><div class="intro_button hvr-right">
+                    <img src="styles/Site_Assets/Right_Arrow.png">
+                </div></a>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+           
+
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    
+    </body>
