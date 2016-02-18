@@ -15,11 +15,22 @@
         <link rel="stylesheet" type="css" href="styles/slideshow.css">
         <link rel="stylesheet" type="css" href="styles/scroll.css">
         <link rel="stylesheet" type="css" href="styles/hover.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,700italic,100italic,700,100' rel='stylesheet' type='text/css'>
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
         <script src="scripts/scripts.js"></script>
         <script src="scripts/jquery-scrolltofixed.js"></script>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-73145652-1', 'auto');
+          ga('send', 'pageview');
+
+        </script> 
            <script>
             $(document).ready(function() {
 
@@ -47,7 +58,7 @@
                     var next = chapters[i + 1];
 
                     chapter.scrollToFixed({
-                        marginTop: $('.header').outerHeight(true) + 20,
+                        marginTop: $('.header').outerHeight(true) + 25,
                         limit: function() {
                             var limit = 0;
                             if (next) {
@@ -76,7 +87,7 @@
                         <div class="row"><span class="title_A">Process: Service Design</span></div>
                         <div class="space_3">
                             <div class="row">
-                                <div class="small-12 medium-7 columns end bottom_border">
+                                <div class="small-12 large-6 columns end bottom_border">
                                     <table>
                                         <tr>
                                             <td><span class="lib">Who:</span></td>
@@ -96,8 +107,10 @@
                         </div>
                         <div class="space_3">
                             <div class="row">
-                                <div class="small-12 medium-7 columns end">
-                                    <p>My team and I were tasked with redesigning the life insurance account opening process of a financial services company to attract more agents, transform underwriting, and align workstreams. These goals were based off of several key insights made by the company, which described a system with many duplicative processes, and a lack of understanding of emerging agent demographics.</p> 
+                                <div class="small-12 large-6 columns end">
+                                    <p>This project came to us from a financial services company, but due to the work’s confidential nature, I will be describing this project in terms of the overarching processes and methodologies my team and I employed. This company asked us to redesign their life insurance account opening process to attract more life insurance agents and align workstreams. 
+
+                                    <p>These goals were based off of several key insights made by the company, which described a system with many duplicative processes, and a lack of understanding of emerging agent demographics. This was a very complex system with many possible areas of improvement. It became clear that the coordination all the touchpoints of the service would take priority over their execution. As such, my team and I used tools and methods that would provide a holistic vision for a future state version of the service.</p> 
 
                                     <p>My roles in this project included preliminary research, persona generation, workshop preparation, and experience storyboarding.</p>
                                 </div>
@@ -122,18 +135,18 @@
                 </span>
             </div>
             <div class="container">
-                <div class="space_6">
+                <div class="space_home">
                     <div class="row">
                         <div class="small-12 small-centered medium-5 medium-uncentered medium-offset-1 large-6 large-offset-0 columns">
                             <p>The client provided us with third party reports on customer demographics that life insurance agents interact with, as well as first hand customer interviews. Although our primary focus during this project was the agent, knowing the expectations and behaviors of their customers rounded out our understanding of an agent’s work life.</p>
                         </div>
                         <div class="small-12 small-centered medium-5 medium-uncentered large-6 end columns">
-                            <p>More reports on agent demographics and interviews with agents created a full picture of what characteristics current agents embody. Using this knowledge, we inferred whom the agent of the future would be, in terms of their client interfacing behaviors, usage of technology, and ethnographic background. We presented these findings in the form of persona sheets.</p>
+                            <p>More reports on agent demographics and interviews with agents created a full picture of what characteristics current agents embody. Using this knowledge, we inferred who the agent of the future would be, in terms of their client interfacing behaviors, usage of technology, and ethnographic background. We presented these findings in the form of persona sheets.</p>
                         </div>
                       
                     </div>
                     <div class="row">
-                        <div class="small-12 small-centered medium-10 large-12 columns">
+                        <div class="small-12 small-centered medium-10 large-12 columns center">
                             <img src="styles/Site_Assets/Project_Images/Service_Design/Paul_Persona.jpg">
                         </div>
                     </div>
@@ -154,7 +167,7 @@
                 </span>
             </div>
             <div class="container">
-                <div class="space_6">
+                <div class="space_home">
                     <div class="row">
                         <div class="small-12 small-centered medium-5 medium-uncentered medium-offset-1 large-6 large-offset-0 columns">
                             <p>After establishing a high level understanding of how life insurance agents conduct their business, we shifted our attention to the process of buying life insurance as a whole.</p>
@@ -166,7 +179,7 @@
                     </div>
                 </div>
             
-                <div class="space_6">
+                <div class="space_home">
                     <div class="row">
                         <div class="small-12 small-centered medium-5 medium-uncentered medium-offset-1 large-6 large-offset-0 columns">
                             <p>My team and I filled out these diagrams as best we could, but we’re not experts on life insurance; our clients are. That’s why we structured a workshop around this service journey map where a large group of clients filled copies of them out with post-its and annotations.</p> 
@@ -179,22 +192,25 @@
                 <div class="space_3">
                     <div class="row">
                         <div class="small-12 small-centered columns">
-                            <div class="small-4 columns">
+                            <div class="small-12 medium-4 columns">
                                 <img src="styles/Site_Assets/Project_Images/Service_Design/Variation_Speed.jpg">
                             </div>
-                            <div class="small-4 columns">
+                            <div class="small-12 medium-4 columns">
                                 <img src="styles/Site_Assets/Project_Images/Service_Design/Variation_Lazy.jpg">
                             </div>
-                            <div class="small-4 columns">
+                            <div class="small-12 medium-4 columns">
                                 <img src="styles/Site_Assets/Project_Images/Service_Design/Variation_Helicopter.jpg">
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="space_3">
+                <div class="space_home">
                     <div class="row">
-                        <div class="small-12 small-centered medium-10 large-12 columns end center">
-                            <span class="title_C">The unique interpretations of the journey generated from the prompts led to intergroup discussions and collaboration, as well as a broader set of data we could base our final journey map on.</span>
+                        <div class="small-12 small-centered medium-5 medium-uncentered medium-offset-1 large-6 large-offset-0 columns">
+                            <p>The unique interpretations of the journey generated from the prompts led to intergroup discussions and collaboration, as well as a broader set of data we could base our final journey map on.</p> 
+                        </div>
+                        <div class="small-12 small-centered medium-5 medium-uncentered large-6 end columns">
+                            <img src="styles/Site_Assets/Project_Images/Service_Design/Workshop_Process.jpg"> 
                         </div>
                     </div>
                 </div>
@@ -214,7 +230,7 @@
                 </span>
             </div>
             <div class="container">
-                <div class="space_6">
+                <div class="space_home">
                     <div class="row">
                         <div class="small-12 small-centered medium-5 medium-uncentered medium-offset-1 large-6 large-offset-0 columns">
                             <p>Creating a final, future state version of the journey map wasn’t difficult after compiling the comprehensive results from the workshop. However, the journey map was dense with information and spanned seven feet long; we needed a more easily digestible form of this journey. This took the form of annotated storyboards.</p> 
@@ -228,19 +244,19 @@
                 <div class="space_3">
                     <div class="row">
                         <div class="small-12 small-centered medium-10 large-12 columns">
-                            <div class="small-4 columns">
+                            <div class="small-12 medium-4 columns">
                                 <img src="styles/Site_Assets/Project_Images/Service_Design/Sketch_1.jpg">
                             </div>
-                            <div class="small-4 columns">
+                            <div class="small-12 medium-4 columns">
                                 <img src="styles/Site_Assets/Project_Images/Service_Design/Sketch_2.jpg">
                             </div>
-                            <div class="small-4 columns">
+                            <div class="small-12 medium-4 columns">
                                 <img src="styles/Site_Assets/Project_Images/Service_Design/Sketch_3.jpg">
                             </div>
                         </div>
                     </div>
                 </div>
-                   <div class="space_6">
+                   <div class="space_home">
                     <div class="row">
                         <div class="small-12 small-centered medium-5 medium-uncentered medium-offset-1 large-6 large-offset-0 columns end">
                             <p>After the initial version was approved by the client, I created more detailed storyboard illustrations that would be shared internally to describe the new vision of life insurance account opening.</p> 
@@ -251,17 +267,17 @@
                     </div>
                 </div>
                     <div class="row">
-                        <div class="small-12 small-centered medium-10 large-12 columns">
+                        <div class="small-12 small-centered large-12 columns center">
                             <img src="styles/Site_Assets/Project_Images/Service_Design/Board_1.jpg">
                         </div>
                     </div>
                     <div class="row">
-                        <div class="small-12 small-centered medium-10 large-12 columns">
+                        <div class="small-12 small-centered large-12 columns center">
                             <img src="styles/Site_Assets/Project_Images/Service_Design/Board_2.jpg">
                         </div>
                     </div>
                     <div class="row">
-                        <div class="small-12 small-centered medium-10 large-12 columns">
+                        <div class="small-12 small-centered large-12 columns center">
                             <img src="styles/Site_Assets/Project_Images/Service_Design/Board_3.jpg">
                         </div>
                     </div>
@@ -271,6 +287,7 @@
                 
             </div>
         </section>
+
         <div class="space_9"></div>
         <div class="footer_section">
             <div class="footer_left">
@@ -280,7 +297,7 @@
             </div>
             <div class="footer_center">
                 <div class="intro_button hvr-grow">
-                    <p><a href="mailto:cbarber92@gmail.com?Subject=Howdy" target="_top">Say Howdy</a></p>
+                    <p><a href="mailto:me@charlie-barber.com?Subject=Howdy" target="_top">Contact Me</a></p>
                 </div>
                 <div class="footer_text"><p>Charlie Barber 2016</p></div>
             </div>
@@ -290,6 +307,7 @@
                 </div></a>
             </div>
         </div>
+    
 
 
 

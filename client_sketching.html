@@ -15,11 +15,22 @@
         <link rel="stylesheet" type="css" href="styles/slideshow.css">
         <link rel="stylesheet" type="css" href="styles/scroll.css">
         <link rel="stylesheet" type="css" href="styles/hover.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,700italic,100italic,700,100' rel='stylesheet' type='text/css'>
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
         <script src="scripts/scripts.js"></script>
         <script src="scripts/jquery-scrolltofixed.js"></script>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-73145652-1', 'auto');
+          ga('send', 'pageview');
+
+        </script> 
            <script>
             $(document).ready(function() {
 
@@ -47,7 +58,7 @@
                     var next = chapters[i + 1];
 
                     chapter.scrollToFixed({
-                        marginTop: $('.header').outerHeight(true) + 20,
+                        marginTop: $('.header').outerHeight(true) + 25,
                         limit: function() {
                             var limit = 0;
                             if (next) {
@@ -76,7 +87,7 @@
                         <div class="row"><span class="title_A">Client Sketching</span></div>
                         <div class="space_3">
                             <div class="row">
-                                <div class="small-12 medium-7 columns end bottom_border">
+                                <div class="small-12 large-6 columns end bottom_border">
                                     <table>
                                         <tr>
                                             <td><span class="lib">Who:</span></td>
@@ -96,7 +107,7 @@
                         </div>
                         <div class="space_3">
                             <div class="row">
-                                <div class="small-12 medium-7 columns end">
+                                <div class="small-12 large-6 columns end">
                                     <p>Experience design can be fairly broad at times. I am asked to design services, marketing campaigns, commercials, digital products, and business strategies. One tool that has always been useful in working on such a large variety of work is drawing. It is fast, easy, and makes people say, “that’s what I was thinking!”.</p>
                                     <p>Below are examples of sketched materials that I have made for clients while working at SapientNitro</p>
                                 </div>
@@ -121,7 +132,14 @@
                 </span>
             </div>
             <div class="container">
-                <div class="space_6">
+                <div class="space_home">
+                    <div class="row">
+                        <div class="small-12 small-centered medium-5 medium-uncentered medium-offset-1 large-6 large-offset-0 columns">
+                            <p>Very seldom do I work on projects that can be summed up in a single moment; it is much more common to invision events and touchpoints stringed together in a story. A tool I often use for tasks like these are storyboards. They are instrumental in depicting emotional narratives, designing the flow and composition of video work, and quickly presenting complex services and customer journeys.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="space_3">
                     <div class="row">
                         <div class="small-12 small-centered medium-5 medium-uncentered medium-offset-1 large-6 large-offset-0 columns">
                             <img src="styles/Site_Assets/Project_Images/Client_Sketching/Ram_Fiddle_SB.jpg">
@@ -173,14 +191,14 @@
                 </div>
                 <div class="space_3">
                     <div class="row">
-                        <div class="small-12 small-centered medium-10 medium-uncentered medium-offset-1 large-12 large-offset-0 columns end">
+                        <div class="small-12 small-centered medium-10 large-12 columns center">
                             <img src="styles/Site_Assets/Project_Images/Client_Sketching/Journey_Betty_Sheet.jpg">
                         </div>
                     </div>
                 </div>
                 <div class="space_3">
                     <div class="row">
-                        <div class="small-12 small-centered medium-10 medium-uncentered medium-offset-1 large-12 large-offset-0 columns end">
+                        <div class="small-12 small-centered medium-10 large-12 columns center">
                             <img src="styles/Site_Assets/Project_Images/Client_Sketching/Journey_John_Sheet.jpg">
                         </div>
                     </div>
@@ -202,37 +220,44 @@
                 </span>
             </div>
             <div class="container">
-                <div class="space_6">
+                <div class="space_home">
                     <div class="row">
-                        <div class="small-12 small-centered medium-10 medium-uncentered medium-offset-1 large-12 large-offset-0 columns">
+                        <div class="small-12 small-centered medium-5 medium-uncentered medium-offset-1 large-6 large-offset-0 columns">
+                            <p>In the world of a design agency, we are frequently required to earn the business of prospective clients. In such cases, providing an informative illustration that captures the general theme, purpose, and content of a proposed body of work can be instrumental in selling the idea.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="space_3">
+                    <div class="row">
+                        <div class="small-12 small-centered medium-10 large-12 columns center">
                             <img src="styles/Site_Assets/Project_Images/Client_Sketching/Camping_1.jpg">
                         </div>
                     </div>
                 </div>
                 <div class="space_3">
                     <div class="row">
-                        <div class="small-12 small-centered medium-10 medium-uncentered large-12 large-offset-0 columns end">
+                        <div class="small-12 small-centered medium-10 large-12 columns center">
                             <img src="styles/Site_Assets/Project_Images/Client_Sketching/Camping_2.jpg">
                         </div>
                     </div>
                 </div>
                 <div class="space_3">
                     <div class="row">
-                        <div class="small-12 small-centered medium-10 medium-uncentered medium-offset-1 large-12 large-offset-0 columns">
+                        <div class="small-12 small-centered medium-10 large-12 columns center">
                             <img src="styles/Site_Assets/Project_Images/Client_Sketching/Park_1.jpg">
                         </div>
                     </div>
                 </div>
                 <div class="space_3">
                     <div class="row">
-                        <div class="small-12 small-centered medium-10 medium-uncentered large-12 large-offset-0 columns end">
+                        <div class="small-12 small-centered medium-10 large-12 columns center">
                             <img src="styles/Site_Assets/Project_Images/Client_Sketching/Park_2.jpg">
                         </div>
                     </div>
                 </div>
                 <div class="space_3">
                     <div class="row">
-                        <div class="small-12 small-centered medium-5 medium-uncentered medium-offset-1 large-6 large-offset-0columns">
+                        <div class="small-12 small-centered medium-5 medium-uncentered medium-offset-1 large-6 large-offset-0 columns">
                             <img src="styles/Site_Assets/Project_Images/Client_Sketching/Spectral_CT.jpg">
                         </div>
                         <div class="small-12 small-centered medium-5 medium-uncentered large-6 columns end">
@@ -242,14 +267,14 @@
                 </div>
                 <div class="space_3">
                     <div class="row">
-                        <div class="small-12 small-centered medium-10 medium-uncentered medium-offset-1 large-12 large-offset-0 columns end">
+                        <div class="small-12 small-centered medium-10 large-12 columns center">
                             <img src="styles/Site_Assets/Project_Images/Client_Sketching/First_Aid_Tough_Mudder_3.png">
                         </div>
                     </div>
                 </div>
                  <div class="space_3">
                     <div class="row">
-                        <div class="small-12 small-centered medium-10 medium-uncentered medium-offset-1 large-12 large-offset-0 columns end">
+                        <div class="small-12 small-centered medium-10 large-12 columns center">
                             <img src="styles/Site_Assets/Project_Images/Client_Sketching/Med_Travel.jpg">
                         </div>
                     </div>
@@ -272,7 +297,7 @@
             </div>
             <div class="footer_center">
                 <div class="intro_button hvr-grow">
-                    <p><a href="mailto:cbarber92@gmail.com?Subject=Howdy" target="_top">Say Howdy</a></p>
+                    <p><a href="mailto:me@charlie-barber.com?Subject=Howdy" target="_top">Contact Me</a></p>
                 </div>
                 <div class="footer_text"><p>Charlie Barber 2016</p></div>
             </div>

@@ -395,8 +395,8 @@
   transition-timing-function: ease-out;
 }
 .hvr-right:hover, .hvr-right:focus, .hvr-right:active {
-  -webkit-transform: translateX(15px);
-  transform: translateX(15px);
+  -webkit-transform: translateX(10px);
+  transform: translateX(10px);
 }
 .hvr-left {
   display: inline-block;
@@ -415,8 +415,8 @@
   transition-timing-function: ease-out;
 }
 .hvr-left:hover, .hvr-left:focus, .hvr-left:active {
-  -webkit-transform: translateX(-15px);
-  transform: translateX(-15px);
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
 }
 
 /* Bob */

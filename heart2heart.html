@@ -15,11 +15,22 @@
         <link rel="stylesheet" type="css" href="styles/slideshow.css">
         <link rel="stylesheet" type="css" href="styles/scroll.css">
         <link rel="stylesheet" type="css" href="styles/hover.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,700italic,100italic,700,100' rel='stylesheet' type='text/css'>
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
         <script src="scripts/scripts.js"></script>
         <script src="scripts/jquery-scrolltofixed.js"></script>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-73145652-1', 'auto');
+          ga('send', 'pageview');
+
+        </script> 
            <script>
             $(document).ready(function() {
 
@@ -47,7 +58,7 @@
                     var next = chapters[i + 1];
 
                     chapter.scrollToFixed({
-                        marginTop: $('.header').outerHeight(true) + 20,
+                        marginTop: $('.header').outerHeight(true) + 25,
                         limit: function() {
                             var limit = 0;
                             if (next) {
@@ -76,7 +87,7 @@
                         <div class="row"><span class="title_A">Heart 2 Heart</span></div>
                         <div class="space_3">
                             <div class="row">
-                                <div class="small-12 medium-7 columns end bottom_border">
+                                <div class="small-12 large-6 columns end bottom_border">
                                     <table>
                                         <tr>
                                             <td><span class="lib">Who:</span></td>
@@ -96,8 +107,8 @@
                         </div>
                         <div class="space_3">
                             <div class="row">
-                                <div class="small-12 medium-7 columns end">
-                                    <p>Within the SNAP lab (SapientNitro Accelerated Prototyping), I worked with my colleagues <span class="link"><a href="http://virtualmo.com/">Mo Morales</a></span>, and <span class="link"><a href="http://www.lancealaughlin.com/">Lance Laughlin</a></span> to create a conceptual product within the realm of biometrics.</p>
+                                <div class="small-12 large-6 columns end">
+                                    <p>Within the SNAP lab (SapientNitro Accelerated Prototyping), I worked with my colleagues <span class="link"><a href="http://virtualmo.com/" target="_blank">Mo Morales</a></span>, and <span class="link"><a href="http://www.lancealaughlin.com/" target="_blank">Lance Laughlin</a></span> to create a conceptual product in the realm of biometrics.</p>
                                     <p>We ended up creating a conceptual piece of wearable technology that would allow two people to passively sense each other’s well being. This empathic sensation was achieved by transmitting a person’s heartbeat through subtle vibrations within the wearable device.</p>
                                     <p>My involvement in the project included initial concept ideation, journey mapping, and designing the device.</p>
                                 </div>
@@ -124,7 +135,7 @@
                 </span>
             </div>
             <div class="container">
-                <div class="space_6">
+                <div class="space_home">
                     <div class="row">
                         <div class="small-12 small-centered medium-5 medium-uncentered medium-offset-1 large-6 large-offset-0 columns">
                             <p>The scope and intent of this project were entirely defined by the format of SNAP, a relatively new institution within SapientNitro. Every month, 3 people from different positions in SapientNitro Boston come together to produce a concept within a randomly chosen field of technology.</p>
@@ -155,7 +166,7 @@
                 </span>
             </div>
             <div class="container">
-                <div class="space_6">
+                <div class="space_home">
                     <div class="row">
                         <div class="small-12 small-centered medium-5 medium-uncentered medium-offset-1 large-6 large-offset-0 columns">
                             <p>We selected biometrics as the technological subject we would explore. The first step in the process was a two hour ideation session with a dozen Sapient employees from different backgrounds. The ideas generated from this session gave the core team ample material to create several possible design directions. We created this mind map as a way of organizing our ideas and finding parallels between them.</p>
@@ -164,7 +175,7 @@
                 </div>
                 <div class="space_3">
                     <div class="row">
-                        <div class="small-12 small-centered medium-10 large-12columns">
+                        <div class="small-12 small-centered medium-10 large-12 columns center">
                             <img src="styles/Site_Assets/Project_Images/H2H/Biometrics.jpg">
                         </div>
                     </div>
@@ -180,7 +191,7 @@
                     </div>
                 </div> 
                     <div class="row">
-                        <div class="small-12 small-centered medium-8 large-10 columns end">
+                        <div class="small-12 small-centered medium-8 large-10 columns end center">
                             <img src="styles/Site_Assets/Project_Images/H2H/Heart_2_Heart.jpg">
                         </div>
                     </div>
@@ -200,7 +211,7 @@
                 </span>
             </div>
             <div class="container">
-                <div class="space_6">
+                <div class="space_home">
                     <div class="row">
                         <div class="small-12 small-centered medium-5 medium-uncentered medium-offset-1 large-6 large-offset-0 columns">
                             <p>Before any code was written or any parts were fabricated, we needed to understand the story and context this device would live in. I sketched out several user journeys that featured relationships where a constant, yet passive connection between two people would be valuable.</p>
@@ -209,14 +220,14 @@
                 </div>
                 <div class="space_3">
                     <div class="row">
-                        <div class="small-12 small-centered medium-10 large-12 columns">
+                        <div class="small-12 small-centered medium-10 large-12 columns center">
                             <img src="styles/Site_Assets/Project_Images/H2H/H2H_Scan_1.jpg">
                         </div>
                     </div>
                 </div>
                  <div class="space_3">
                     <div class="row">
-                        <div class="small-12 small-centered medium-10 large-12 columns">
+                        <div class="small-12 small-centered medium-10 large-12 columns center">
                             <img src="styles/Site_Assets/Project_Images/H2H/H2H_Scan_2.jpg">
                         </div>
                     </div>
@@ -236,7 +247,7 @@
                 </span>
             </div>
             <div class="container">
-                <div class="space_6">
+                <div class="space_home">
                     <div class="row">
                         <div class="small-12 small-centered medium-5 medium-uncentered medium-offset-1 large-6 large-offset-0 columns">
                             <p>With the two weeks of producing the prototype well underway, my teammates explored technology that would allow our user journeys to come to life as I began designing the form of the device.</p>
@@ -250,7 +261,7 @@
                 </div>
                 <div class="space_3">
                     <div class="row">
-                        <div class="small-12 small-centered medium-10 large-12 columns">
+                        <div class="small-12 small-centered medium-10 large-12 columns center">
                             <img src="styles/Site_Assets/Project_Images/H2H/H2H_Scan_6.jpg">
                         </div>
                     </div>
@@ -264,14 +275,14 @@
                 </div>
                 <div class="space_3">
                     <div class="row">
-                        <div class="small-12 small-centered medium-10 large-12 columns">
+                        <div class="small-12 small-centered medium-10 large-12 columns center">
                             <img src="styles/Site_Assets/Project_Images/H2H/H2H_Scan_3.jpg">
                         </div>
                     </div>
                 </div>
                 <div class="space_3">
                     <div class="row">
-                        <div class="small-12 small-centered medium-10 large-12 columns">
+                        <div class="small-12 small-centered medium-10 large-12 columns center">
                             <img src="styles/Site_Assets/Project_Images/H2H/H2H_Scan_4.jpg">
                         </div>
                     </div>
@@ -292,7 +303,7 @@
                 </span>
             </div>
             <div class="container">
-                <div class="space_6">
+                <div class="space_home">
                     <div class="row">
                         <div class="small-12 small-centered medium-5 medium-uncentered medium-offset-1 large-6 large-offset-0 columns">
                             <p>One challenge of this fast-paced was maintaining productivity within the separate tracks of design and technological development. Lance and Mo encountered many problems with the array of components we wanted to use to create a wireless connection between the two devices; subsequently, the dimensions of the device were constantly in flux.</p>
@@ -324,7 +335,7 @@
                 </div>
                 
                     <div class="row">
-                        <div class="small-12 small-centered medium-10 large-12 columns">
+                        <div class="small-12 small-centered medium-10 large-12 columns center">
                             <img src="styles/Site_Assets/Project_Images/H2H/Felt_Process.jpg">
                         </div>
                     </div>
@@ -345,7 +356,7 @@
                 </span>
             </div>
             <div class="container">
-                <div class="space_6">
+                <div class="space_home">
                     <div class="row">
                         <div class="small-12 small-centered medium-5 medium-uncentered medium-offset-1 large-6 large-offset-0 columns">
                             <p>Our original intent was to create a pair of identical devices that could receive and transmit two people’s heartbeat. However, time and technology constraints limited us to creating a band that transmitted a pulse and a separate receiver that translated that pulse into soft vibrations.</p>
@@ -354,14 +365,14 @@
                 </div>
                 <div class="space_3">
                     <div class="row">
-                        <div class="small-12 small-centered medium-10 large-12 columns">
+                        <div class="small-12 small-centered medium-10 large-12 columns center">
                             <img src="styles/Site_Assets/Project_Images/H2H/H2H_Product_Shot10_Lo.jpg">
                         </div>
                     </div>
                 </div>
                 <div class="space_3">
                     <div class="row">
-                        <div class="small-12 small-centered medium-10 large-12 columns">
+                        <div class="small-12 small-centered medium-10 large-12 columns center">
                             <img src="styles/Site_Assets/Project_Images/H2H/H2H_Product_Shot07_Lo.jpg">
                         </div>
                     </div>
@@ -385,7 +396,7 @@
             </div>
             <div class="footer_center">
                 <div class="intro_button hvr-grow">
-                    <p><a href="mailto:cbarber92@gmail.com?Subject=Howdy" target="_top">Say Howdy</a></p>
+                    <p><a href="mailto:me@charlie-barber.com?Subject=Howdy" target="_top">Contact Me</a></p>
                 </div>
                 <div class="footer_text"><p>Charlie Barber 2016</p></div>
             </div>

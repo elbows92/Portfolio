@@ -18,13 +18,18 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+p {
+	font-family: 'Roboto', sans-serif;
+}
 img {
 	max-width: 100%;
 }
 h3 {
+	font-family: 'Roboto', sans-serif;
 	line-height: 1.7em!important;
 }
 table {
+	font-family: 'Roboto', sans-serif;
 	background: none!important;
 	border: none!important;
 }
@@ -101,7 +106,29 @@ td {
 .green {
 	background-color: #a9cc8a;
 }
+.gradient {
+background: linear-gradient(45deg, #bdbdbd, #9fe4df, #a3c6ee, #e69cb6);
+background-size: 800% 800%;
 
+-webkit-animation: gradient 30s ease infinite;
+-moz-animation: gradient 30s ease infinite;
+animation: gradient 30s ease infinite;
+}
+@-webkit-keyframes gradient {
+    0%{background-position:0% 87%}
+    50%{background-position:100% 14%}
+    100%{background-position:0% 87%}
+}
+@-moz-keyframes gradient {
+    0%{background-position:0% 87%}
+    50%{background-position:100% 14%}
+    100%{background-position:0% 87%}
+}
+@keyframes gradient { 
+    0%{background-position:0% 87%}
+    50%{background-position:100% 14%}
+    100%{background-position:0% 87%}
+}
 .shadow {
 	box-shadow: 5px 5px 2.5px #333;
 }
@@ -126,7 +153,7 @@ td {
 	display: block;
 	background-color: #fff;
 	width: 100%;
-	height: 200px;
+	height: 100px;
 	z-index: -1;
 
 }
@@ -137,6 +164,7 @@ td {
 	border-bottom: solid 1px #111;
 }
 .5_W {
+	font-family: 'Roboto', sans-serif;
 	display: inline-block;
 	background-color: red;
 }
@@ -152,6 +180,7 @@ td {
 	margin-bottom: 6em;
 }
 .lib {
+	font-family: 'Roboto', sans-serif;
 	background-color: #deed0e;
 	color: #111;
 	font-weight: bold;
@@ -165,7 +194,7 @@ td {
 	color: #fff;
 }
 .link {
-	background-color: #deed0e;
+	background-color: #deed0e;	
 	color: #111;
 
 }
@@ -191,23 +220,18 @@ td {
 	margin-bottom: 6em;
 	position: absolute;
 }
-.intro_buttons {
-	margin-bottom: none;
-	width: 6em;
-	margin: auto;
-}
 .intro_button {
-	width: 6.2em;
 	height: 3em;
 	background-color: #deed0e;
 	text-align: center;
 }
 .intro_button img{
-	margin-top: .5em;
+	margin: .5em;
 	max-height: 2em;
 }
 .intro_button p{
-	padding-top: .75em;
+	font-family: 'Roboto', sans-serif;
+	padding: .75em;
 	font-weight: bold;
 }
 .intro_button a{
@@ -216,44 +240,36 @@ td {
 .intro_button a:hover{
 	color: #fff;
 }
-.nav {
-	height: 80px;
-}
-.fixed_logo {
-	position: fixed;
-	left:15px;
-	top:20px;
-	width:30px;
-	z-index: 9999;
+.button_space {
+	margin-left: 1em;
+	margin-right: 1em;
 }
 .footer_section {
     clear: both;
-    height: 300px;
+    padding-top: 5em;
     background-color: #ccc;
     text-align: center;
 }
 .footer_left {
-	margin-top: 100px;
-	margin-left: 10%;
+	margin-left: 5%;
 	float: left;
 	display: inline-block;
 }
 .footer_center {
-	margin-top: 100px;
 	display: inline-block;
 }
 .footer_right {
-	margin-top: 100px;
-	margin-right: 10%;
+	margin-right: 5%;
 	float:right;
 	display: inline-block;
 }
 .footer_text {
-	margin-top: 8em;
+	margin-top: 4em;
 	font-size: .8em;
 	color: #fff;
 }
 .crafts p {
+	font-family: 'Roboto', sans-serif;
 	line-height: 2em;
 }
 .crafts img {
@@ -263,6 +279,7 @@ td {
 	position: relative;
 }
 .title_A {
+	font-family: 'Roboto', sans-serif;
 	font-size: 3em;
 	background-color: #deed0e;
 	padding: 7px;
@@ -270,22 +287,53 @@ td {
 	line-height: 1.3em;
 }
 .title_B {
+	font-family: 'Roboto', sans-serif;
 	font-size: 2em;
 	background-color: #deed0e;
-	padding: 3px;
+	padding: 3px 8px 3px 8px;
 	color: #111;
 	line-height: 1.3em;
+	bottom: 1em;
+}
+.title_B a{
+	color: #111;
+
+}
+.title_B a:hover{
+	color: #fff;
 }
 .title_C {
+	font-family: 'Roboto', sans-serif;
 	font-size: 1.5em;
 	padding:3px;
 	background-color: #deed0e;
 	color: #111;
 	line-height: 1.3em;
 }
+.title_D {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.25em;
+	font-weight: bold;
+	padding: .25em;
+	background-color: #deed0e;
+}
+.title_E {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.25em;
+	font-weight: bold;
+}
 .note {
+	font-family: 'Roboto', sans-serif;
 	background-color: #E0E0E0;
 	padding: 1em 2em .25em 2em !important;
+}
+.description {
+	font-family: 'Roboto', sans-serif;
+	color: #333;
+	font-size: .9em;
+	padding-left: 1em;
+	margin-bottom: .5em;
+	margin-top: .5em;
 }
 
 .overlay_picture_title {
@@ -304,9 +352,10 @@ td {
 }
 .overlay_medium_title {
 	position: absolute;
-	top: -2em;
+	top: -1em;
 	left: 10%;
 	right: 5%;
+	bottom: 2em;
 	z-index: 2;
 }
 .overlay_large_title {
@@ -330,24 +379,13 @@ td {
 .overlay:hover:after  {
   opacity: .5;
 }
-.date_small {
-	z-index: 1;
-	bottom: 1em;
-	left: 15%;
-	position: absolute;
-}
 .date_medium {
-	z-index: 1;
-	bottom: 1em;
+	font-family: 'Roboto', sans-serif;
+	padding-top: 10px;
+	margin-top: 10px;
+	top: 10px;
 	left: 10%;
-	position: absolute;
 	font-weight: bold;
-}
-.date_large {
-	z-index: 1;
-	bottom: 1em;
-	left: 7%;
-	position: absolute;
 }
 .text {
 
@@ -394,15 +432,21 @@ td {
 	text-align: center;
 
 }
+.columns img{
+	width: 100%;
+}
 
 /* Medium and up */
 
 @media (min-width: 40.0625em) {
-	
-	.intro_buttons {
-		position: relative;
-		left: 62.5%;
-		z-index: 3;
+
+	.white_space {
+		display: block;
+		background-color: #fff;
+		width: 100%;
+		height: 200px;
+		z-index: -1;
+
 	}
 	.overlay_picture_title {
 		position: absolute;
@@ -429,71 +473,22 @@ td {
 		margin-top: 6em;
 	}
 	.space_small {
-		margin-top: 1;
-	
-}
+		margin-top: 1;	
+	}
+	.footer_left {
+		margin-left: 8%;
+		float: left;
+		display: inline-block;
+	}
+	.footer_right {
+		margin-right: 8%;
+		float:right;
+		display: inline-block;
+	}
+
 /* Large and up */
 
 @media (min-width: 64.0625em) {
 	.top {
 		display: none;
 	}
-@media (min-width: 64.0625em) {
-	.space_home {
-		margin-top: 6em;
-	}
-	/*.full {
-		display: none;
-	}
-	.lefty {
-		display: block;
-		background-color: #c6c8c8;
-	}
-	.righty {
-		height: 100%;
-		position: absolute;
-		z-index: -9000;
-		right: 0;
-		top: 0;
-		display: block;
-		background-image: url("Site_Assets/Character_1_Big.jpg");
-		background-repeat: no-repeat;
-		background-position: center top;
-
-	}
-	.left {
-		display: inline-block;
-		width: 50%;
-		background-color: #c6c8c8;
-		height: 700px;
-	}
-	.right {
-		display: inline-block;
-		height: 700px;
-		width: 50%;
-		float: right;
-		background-color: #deed0e;
-		background-image: url("Site_Assets/Character_1_Big.jpg");
-		background-repeat: no-repeat;
-		background-position: center top;
-
-	}
-	.white_space {
-		display: block;
-		background-color: #fff;
-		width: 100%;
-		height: 200px;
-	}
-	.top {
-		display: none;
-	}
-	.relative {
-		margin:auto;
-	}
-	.intro_buttons {
-		margin-bottom: 2em;
-		float: right;
-		margin-right: -3em;
-	}*/
-}
-

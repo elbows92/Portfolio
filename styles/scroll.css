@@ -14,8 +14,9 @@
     font-weight: bold;
 }
 .chapter {
+    font-family: 'Roboto', sans-serif;
     overflow: hidden;
-    font-size: 1em;
+    font-size: 1.25em;
     font-weight: bold;
     padding: .5em;
     line-height: 1em!important;
@@ -35,27 +36,32 @@
 
 }
 .chapter_box {
-    height:40px;
-    width:auto;
+    height: 40px;
+    width: auto;
 
 }
 .chapter_mobile {
+    font-family: 'Roboto', sans-serif;
     margin-left: 5%;
+    margin-right: 5%;
+    font-size: 1.25em;
     background-color: rgba(222,237,14,.7);
     color: #111;
     padding: .3em;
-    line-height: 1em!important;
+    line-height: 1.5em!important;
     font-weight: bold;
-    overflow: hidden;
+    display: block;
+    
 }
 .contact {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25em;
     font-weight: bold;
     background-color: rgba(222,237,14,.7);
     color: #111;
-    margin-left: 16px;
-    font-size: 1em;
+    margin-left: 10px;
     padding: .5em;
-    display: inline block; 
+    display: inline-block; 
 }
 .contact a{
     color: #111;
@@ -66,7 +72,7 @@
 
 .header_box {
     width: 20px;
-    height:20px;
+    height: 20px;
    
 }
 .header {
@@ -83,7 +89,15 @@
     transform: opacity(1);
 }
 .header img{
-    width: 30px;
+    width: 35px;
+    margin-bottom: 10px;
+}
+.fixed_logo {
+    position: fixed;
+    left: 15px;
+    top: 26px;
+    width: 35px;
+    z-index: 9999;
 }
 #test {
     background: #f00;
