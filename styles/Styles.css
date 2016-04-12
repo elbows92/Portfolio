@@ -153,7 +153,7 @@ animation: gradient 30s ease infinite;
 	display: block;
 	background-color: #fff;
 	width: 100%;
-	height: 100px;
+	height: 120px;
 	z-index: -1;
 
 }
@@ -233,6 +233,7 @@ animation: gradient 30s ease infinite;
 	font-family: 'Roboto', sans-serif;
 	padding: .75em;
 	font-weight: bold;
+	color: #111;
 }
 .intro_button a{
 	color: #111;
@@ -240,6 +241,10 @@ animation: gradient 30s ease infinite;
 .intro_button a:hover{
 	color: #fff;
 }
+.intro_button p:hover{
+	color: #fff;
+}
+
 .button_space {
 	margin-left: 1em;
 	margin-right: 1em;
@@ -251,17 +256,19 @@ animation: gradient 30s ease infinite;
     text-align: center;
 }
 .footer_left {
-	margin-left: 5%;
-	float: left;
-	display: inline-block;
+	float: none;
+	display: block;
+	margin-bottom: 1em;
+
 }
 .footer_center {
 	display: inline-block;
+	margin-bottom: 1em;
 }
 .footer_right {
-	margin-right: 5%;
-	float:right;
-	display: inline-block;
+	float: none;
+	display: block;
+	margin-bottom: 1em;
 }
 .footer_text {
 	margin-top: 4em;
@@ -479,11 +486,16 @@ animation: gradient 30s ease infinite;
 		margin-left: 8%;
 		float: left;
 		display: inline-block;
+		margin-bottom: 0em;
 	}
 	.footer_right {
 		margin-right: 8%;
 		float:right;
 		display: inline-block;
+		margin-bottom: 0em;
+	}
+	.footer_center {
+		margin-bottom: 0em;
 	}
 
 /* Large and up */
